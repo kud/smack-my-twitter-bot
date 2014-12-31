@@ -1,0 +1,22 @@
+{
+  "name": "smack-my-twitter-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:kud/smack-my-twitter-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bloody-compile": "^1.0.0",
+    "chalk": "^0.5.1",
+    "lodash": "^2.4.1",
+    "nodemon": "^1.2.1",
+    "twit": "^1.1.18"
+  }
+}
