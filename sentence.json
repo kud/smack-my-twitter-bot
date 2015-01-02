@@ -170,7 +170,7 @@
     "Parlez-moi, vous verrez bien."
   ],
   "fix": [
-    "Vous n'aimez pas la langue français ? \"{{0}}\", non pas \"{{1}}\".",
+    "Vous n'aimez pas la langue française ? \"{{0}}\", non pas \"{{1}}\".",
     "Respectez donc un peu la langue française. \"{{0}}\", non pas \"{{1}}\".",
     "\"{{0}}\", non pas \"{{1}}\". Allez, on supprime son tweet, et on recommence s'il vous plait.",
     "Je suis désolé de m'incruster mais c'est \"{{0}}\" et non pas \"{{1}}\".",
