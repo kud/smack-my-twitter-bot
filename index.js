@@ -36,9 +36,9 @@ var tweetThat = function( tweet, message ) {
     setTimeout(function() {
       api.post('statuses/update', postParam, function( err, data, response ) {
         console.log('')
-        console.log( chalk.bgBlue('Tweet    —'), tweet.text )
-        console.log( chalk.bgGreen('Answer   —'), message )
-        if ( err ) console.log( chalk.bgRed('Error    —') , err )
+        console.log( chalk.bgBlue( chalk.black('Tweet    —') ), chalk.bgWhite( chalk.black('@' + tweet.user.screen_name ) ) + ' ' + tweet.text )
+        console.log( chalk.bgGreen( chalk.black('Answer   —') ), chalk.bgWhite( chalk.black('@' + username ) ) + ' ' + message )
+        if ( err ) console.log( chalk.bgRed( chalk.white('Error    —') ) , err )
         console.log('')
       })
     // }, getRandomInt( settings.timeToAnswer.min, settings.timeToAnswer.max ) )
@@ -80,7 +80,7 @@ api
     if ( !(tweet.lang === 'fr' || tweet.lang === 'en') ) return
 
     // show tweet
-    console.log( chalk.bgBlack('Stream   —'), tweet.text )
+    console.log( chalk.bgBlack('Stream   —'), chalk.bgWhite( chalk.black('@' + tweet.user.screen_name ) ) + ' ' + tweet.text )
     // console.log( chalk.bgBlack('Stream   —'), tweet ) // show all tweet
 
     var answer = undefined
