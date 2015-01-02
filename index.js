@@ -1,13 +1,13 @@
 /**
  * Import
  */
-var chalk    = require('chalk')
-var Twit     = require('twit')
-var _        = require('lodash')
-var compile  = require('bloody-compile')
-var settings = require('./settings.json')
-var track    = require('./track.json')
-var sentence = require('./sentence.json')
+var chalk     = require('chalk')
+var Twit      = require('twit')
+var _         = require('lodash')
+var compile   = require('bloody-compile')
+var settings  = require('./settings.json')
+var track     = require('./track.json')
+var sentence  = require('./sentence.json')
 
 /**
  * Functions
@@ -61,6 +61,8 @@ var streamParam = {
   track: trackedWords
 }
 
+var whitelist = settings.whitelist
+
 console.log('') // cleaner
 
 /**
@@ -73,11 +75,17 @@ api
     // break RT
     if ( typeof tweet.retweeted_status !== 'undefined' ) return
 
-    // don't care about small accounts
-    if ( tweet.user.followers_count < settings.followerLimit ) return
+    // rule if not in whitelist
+    if ( _.indexOf( whitelist, tweet.user.screen_name ) < 0 ) {
 
-    // don't care about some languages
-    if ( !(tweet.lang === 'fr' || tweet.lang === 'en') ) return
+      // don't care about small accounts
+      if ( tweet.user.followers_count < settings.followerLimit ) return
+
+      // don't care about some languages
+      if ( !(tweet.lang === 'fr' || tweet.lang === 'en') ) return
+
+    }
+
 
     // show tweet
     console.log( chalk.bgBlack('Stream   —'), chalk.bgWhite( chalk.black('@' + tweet.user.screen_name ) ) + ' ' + tweet.text )
@@ -95,12 +103,12 @@ api
 
       // fdp
       if ( tweet.text.search(/[^a-z]fdp/gi) >= 0 )
-        whatToSay = ["Vous parlez bien de frais de port ?"]
+        whatToSay = sentence.fdp
       // tg
       else if ( tweet.text.search(/[^a-z]tg/gi) >= 0 )
         whatToSay = sentence.offensive.concat(sentence.tg)
       // thanks
-      else if ( tweet.text.search(/[^a-z]merci/gi) >= 0 )
+      else if ( tweet.text.search(/[^a-z]merci/gi) >= 0 || tweet.text.search(/[^a-z]pardon/gi) >= 0 )
         whatToSay = sentence.thanks
       // nike
       else if ( tweet.text.search(/[^a-z]nike/gi) >= 0 )
@@ -150,7 +158,7 @@ api
       }
 
       else if ( tweet.text.search(/[^a-z][^a-z]mourrir/ig) >= 0 ) {
-        answer = sentence.mourir
+        answer = sentence.mourrir
       }
 
       else if ( tweet.text.search(/[^a-z]la faute (a|à|aux)/ig) >= 0 ) {
@@ -202,7 +210,7 @@ api
       }
 
       else if ( tweet.text.search(/(du|le) soucis/ig) >= 0 ) {
-        answer = sentence.souci
+        answer = sentence.soucis
       }
 
       else if ( tweet.text.search(/[^a-z]ses sa/ig) >= 0 ) {

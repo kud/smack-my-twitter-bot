@@ -10,5 +10,6 @@
   "timeToAnswer": {
     "min": "1000",
     "max": "10000"
-  }
+  },
+  "whitelist": []
 }
