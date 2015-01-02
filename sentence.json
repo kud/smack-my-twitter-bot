@@ -61,6 +61,7 @@
     "Je ne fais que corriger.",
     "Douter, toujours douter.",
     "J'ai une des faims moi...",
+    "Tout est relatif.",
     "Attendez, on m'appelle, je reviens.",
     "Nous sommes nous pas déjà croisés par hasard ?",
     "C'est donc ça Twitter ?",
@@ -68,6 +69,8 @@
   ],
   "offensive": [
     "Mal poli(e).",
+    "vou croyé ke ses joli décrir komme sa ?",
+    "Pauvre France...",
     "Lalalala je ne vous écoute plus.",
     "On respire, tout va bien se passer.",
     "C'est à moi que vous parlez comme cela ?",
@@ -153,7 +156,8 @@
     "Vous savez, je ne fais que mon devoir.",
     "Allons, allons, soyez modeste.",
     "Bonne journée à vous alors.",
-    "Mais de rien."
+    "👍",
+    "A la prochaine !"
   ],
   "bot": [
     "Qui a dit que j'étais un robot ? 0:)",
@@ -166,8 +170,12 @@
     "Parlez-moi, vous verrez bien."
   ],
   "fix": [
+    "Vous n'aimez pas la langue français ? \"{{0}}\", non pas \"{{1}}\".",
+    "Respectez donc un peu la langue française. \"{{0}}\", non pas \"{{1}}\".",
+    "\"{{0}}\", non pas \"{{1}}\". Allez, on supprime son tweet, et on recommence s'il vous plait.",
     "Je suis désolé de m'incruster mais c'est \"{{0}}\" et non pas \"{{1}}\".",
     "Excusez-moi mais c'est \"{{0}}\" et non pas \"{{1}}\".",
+    "J'en ai un peu marre de vos fautes. C'est \"{{0}}\", non pas \"{{1}}\".",
     "Je me permets d'intervenir dans la discussion. On écrit \"{{0}}\" et non pas \"{{1}}\".",
     "Excusez-moi d'intervenir mais c'est \"{{0}}\" et non pas \"{{1}}\".",
     "Où avez-vous vu que c'était \"{{1}}\" ? C'est plutôt \"{{0}}\".",
