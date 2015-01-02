@@ -21,6 +21,7 @@ var getRandomInt = function( min, max ) {
   return Math.floor(Math.random() * (max - min)) + min
 }
 
+
 var tweetThat = function( tweet, message ) {
 
   // do not answer to yourself, buddy.
@@ -40,7 +41,8 @@ var tweetThat = function( tweet, message ) {
         if ( err ) console.log( chalk.bgRed('Error    —') , err )
         console.log('')
       })
-    }, getRandomInt( settings.timeToAnswer.min, settings.timeToAnswer.max ) )
+    // }, getRandomInt( settings.timeToAnswer.min, settings.timeToAnswer.max ) )
+    }, settings.timeToAnswer.max )
 
   }
 
@@ -128,8 +130,8 @@ api
      * Errrrrrrrrrror found!
      */
     // do not answer to everything, just sometimes
-    // else if ( getRandomInt(0,2) ) {
-    else if ( true ) {
+    else if ( getRandomInt(0,2) ) {
+    // else if ( true ) {
 
       if ( tweet.text.search(/[^a-z](le|du) digital/ig) >= 0 ) {
         answer = _.sample( sentence.digital )
