@@ -179,6 +179,12 @@ api
         answer = compile( _.sample( whatToSay ), 'j\'ai tort', 'j\'ai tord')
       }
 
+      else if ( tweet.text.search(/[^a-z]t\'as tord/ig) >= 0 ) {
+        var whatToSay = sentence.fix
+
+        answer = compile( _.sample( whatToSay ), 't\'as tort', 't\'as tord')
+      }
+
       else if ( tweet.text.search(/[^a-z]sa va[^a-z]/ig) >= 0 ) {
         var whatToSay = sentence.fix
 
