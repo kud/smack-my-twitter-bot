@@ -189,6 +189,7 @@
     "\"{{1}}\" ≻ \"{{0}}\" 👌",
     "Vous vouliez dire \"{{0}}\", n'est-ce pas ?",
     "\"{{0}}\", nuance. 👌",
+    "Hello ! On écrit cela \"{{0}}\". 👌",
     "Savez-vous que l'on écrit cela \"{{0}}\" ? 👌",
     "J'ai regardé dans le dictionnaire. C'est bien \"{{0}}\" et non \"{{1}}\".",
     "Bonjour. Vous avez fait une faute. C'est \"{{0}}\" et non \"{{1}}\".",
@@ -200,6 +201,7 @@
     "Mes bras m'en tombent. \"{{0}}\", non pas \"{{1}}\".",
     "Correction faite ! \"{{0}}\", non pas \"{{1}}\".",
     "\"{{1}}\" ? vraiment ?... \"{{0}}\" plutôt oui.",
+    "\"{{1}}\" ? vraiment ?... retournez à l'école je vous prie. C'est \"{{0}}\".",
     "\"{{1}}\" ? Vous êtes sérieux/se ?... \"{{0}}\" plutôt oui.",
     "Regardons dans le dictionnaire. Ah ! C'est bien \"{{0}}\" et non \"{{1}}\". 👌"
   ],
