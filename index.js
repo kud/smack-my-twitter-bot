@@ -169,14 +169,14 @@ api
       rules = [
         [/[^a-z]fdp/gi, sentence.fdp],
         [/[^a-z]tg/gi, sentence.offensive.concat(sentence.tg)],
-        [/(merci|pardon)/gi, sentence.thanks],
+        [/(merci|pardon|désolé|desole)/gi, sentence.thanks],
         [/nike/gi, sentence.nike],
         [/respect/gi, sentence.respect],
-        [/(ntm|(nique|niquer) ta (mère|mere))/gi, sentence.respect],
+        [/(ntm|(nique|niquer) ta (mère|mere))/gi, sentence.mere.concat(sentence.ntm)],
         [/[^a-z](mere|mère)/gi, sentence.mere],
-        [/[^a-z](gueule|ballec|blc|foutre|vtf|vtff|chier|couille|couilles)/gi, sentence.offensive],
-        [/[^a-z](robot|robots|bot|bots)/gi, sentence.bot],
-        ['', sentence.smalltalk]
+        [/[^a-z](gueule|ballec|blc|foutre|vtf|vtff|chier|couille|couilles)/gi, sentence.offensive], // offensive
+        [/[^a-z](robot|robots|bot|bots)/gi, sentence.bot], // bot
+        ['', sentence.smalltalk] // if no detection, answer by smalltalk
       ]
 
     }
@@ -195,6 +195,8 @@ api
         [/entrain de/ig, sentence.fix, { original: 'entrain', fix: 'en train' }],
         [/au (coiffeur|médecin|medecin|pharmacien|notaire|dentiste|garagiste)/ig, sentence.fix, { original: 'au', fix: 'chez' }],
         [/[^a-z]voye/ig, sentence.mistake, { original: 'voye' }],
+        [/[^a-z]je comprend/ig, sentence.mistake, { original: 'comprend', fix: 'comprends' }],
+        [/bonne (appetit|appétit)/ig, sentence.fix.concat(sentence.mistake), { original: 'bonne appétit', fix: 'bon appétit' }],
         [/[^a-z]voyes/ig, sentence.mistake, { original: 'voyes' }],
         [/[^a-z](le|du) digital/ig, sentence.digital],
         [/[^a-z]datas/ig, sentence.fix, { original: 'datas', fix: 'data' }],
