@@ -1,3 +1,5 @@
+console.log('') // cleaner
+
 /**
  * Import
  */
@@ -21,7 +23,12 @@ var getRandomInt = function( min, max ) {
   return Math.floor(Math.random() * (max - min)) + min
 }
 
-
+/**
+ * What to tweet
+ * @param  {object} tweet
+ * @param  {string} message
+ * @return {void}
+ */
 var tweetThat = function( tweet, message ) {
 
   // do not answer to yourself, buddy.
@@ -34,19 +41,82 @@ var tweetThat = function( tweet, message ) {
 
     // make it not so much bot
     setTimeout(function() {
+
       api.post('statuses/update', postParam, function( err, data, response ) {
+
         console.log('')
         console.log( chalk.bgBlue( chalk.black('Tweet    —') ), chalk.bgWhite( chalk.black('@' + tweet.user.screen_name ) ) + ' ' + tweet.text )
         console.log( chalk.bgGreen( chalk.black('Answer   —') ), chalk.bgWhite( chalk.black('@' + username ) ) + ' ' + message )
         if ( err ) console.log( chalk.bgRed( chalk.white('Error    —') ) , err )
         console.log('')
+
       })
+
     // }, getRandomInt( settings.timeToAnswer.min, settings.timeToAnswer.max ) )
     }, settings.timeToAnswer.max )
 
   }
 
 }
+
+/**
+ * Handle what to answer
+ * @param  {string} text          text to check
+ * @param  {regex} regex
+ * @param  {array} answer         list of answers
+ * @param  {object} replacement
+ * @return {string|false}
+ */
+var handleAnswer = function( text, regex, answers, replacement ) {
+
+  if ( text.search( regex ) >= 0 ) {
+    return compile( _.sample( answers ), replacement )
+  }
+
+  else {
+    return undefined
+  }
+
+}
+
+/**
+ * Check the text and answer it.
+ * @param  {[type]} text
+ * @param  {[type]} rules
+ * @return {string}
+ * ex:
+ *   - text = 'hello sa va'
+ *   - rules = [
+ *      [/[^a-z]nope[^a-z]/ig, ['nope']],
+ *      [/[^a-z]sa va[^a-z]/ig, ['pas d\'accord']]
+ *    ]
+ */
+var checkAndAnswer = function( text, rules ) {
+
+  var status = undefined
+
+  var i = 0
+
+  while ( status === undefined ) {
+
+    if ( i == rules.length) break
+
+    var rule = rules[i]
+
+    if ( rule.length === 3 ) {
+      status = handleAnswer( text, rule[0], rule[1], rule[2] )
+    }
+    else {
+      status = handleAnswer( text, rule[0], rule[1] )
+    }
+
+    i++
+  }
+
+  return status
+
+}
+
 
 /**
  * Definition
@@ -61,10 +131,6 @@ var streamParam = {
   track: trackedWords
 }
 
-var whitelist = settings.whitelist
-
-console.log('') // cleaner
-
 /**
  * Action!
  */
@@ -72,11 +138,14 @@ api
   .stream('statuses/filter', streamParam)
   .on('tweet', function( tweet ) {
 
-    // break RT
+    // blacklisted? do not answer
+    if ( _.indexOf( settings.blacklist, tweet.user.screen_name ) >= 0 ) return
+
+    // break RT, do not answer
     if ( typeof tweet.retweeted_status !== 'undefined' ) return
 
-    // rule if not in whitelist
-    if ( _.indexOf( whitelist, tweet.user.screen_name ) < 0 ) {
+    // if not in whitelist, check some rules first
+    if ( _.indexOf( settings.whitelist, tweet.user.screen_name ) < 0 ) {
 
       // don't care about small accounts
       if ( tweet.user.followers_count < settings.followerLimit ) return
@@ -86,194 +155,70 @@ api
 
     }
 
-
     // show tweet
     console.log( chalk.bgBlack('Stream   —'), chalk.bgWhite( chalk.black('@' + tweet.user.screen_name ) ) + ' ' + tweet.text )
     // console.log( chalk.bgBlack('Stream   —'), tweet ) // show all tweet
 
-    var answer = undefined
+    var rules = []
 
     /**
-     * Are you talking to me? This is my replies.
+     * Replies
      */
     if ( tweet.in_reply_to_screen_name === username && tweet.user.screen_name !== username ) {
 
-      // default
-      var whatToSay = sentence.smalltalk
-
-      // fdp
-      if ( tweet.text.search(/[^a-z]fdp/gi) >= 0 )
-        whatToSay = sentence.fdp
-      // tg
-      else if ( tweet.text.search(/[^a-z]tg/gi) >= 0 )
-        whatToSay = sentence.offensive.concat(sentence.tg)
-      // thanks
-      else if ( tweet.text.search(/[^a-z]merci/gi) >= 0 || tweet.text.search(/[^a-z]pardon/gi) >= 0 )
-        whatToSay = sentence.thanks
-      // nike
-      else if ( tweet.text.search(/[^a-z]nike/gi) >= 0 )
-        whatToSay = sentence.nike
-      // respect
-      else if ( tweet.text.search(/[^a-z](respect|respecte)/gi) >= 0 )
-        whatToSay = sentence.respect
-      // ntm
-      else if ( tweet.text.search(/[^a-z]ntm/gi) >= 0 || tweet.text.search(/[^a-z]nique ta (mère|mere)/gi) >= 0 )
-        whatToSay = sentence.offensive.concat(sentence.ntm)
-      // mother
-      else if ( tweet.text.search(/[^a-z](mere|mère)/gi) >= 0)
-        whatToSay = sentence.mere
-      // offensive
-      else if ( tweet.text.search(/[^a-z]gueule/gi) >= 0 || tweet.text.search(/[^a-z]ballec/gi) >= 0 || tweet.text.search(/[^a-z]foutre/gi) >= 0 || tweet.text.search(/[^a-z]vtf[^a-z]/gi) >= 0 || tweet.text.search(/[^a-z]chier[^a-z]/gi) >= 0 || tweet.text.search(/[^a-z](couille|couilles)[^a-z]/gi) >= 0 )
-        whatToSay = sentence.offensive
-      // bot? am i a bot? 0:)
-      else if ( tweet.text.search(/[^a-z](robot|robots|bot|bots)/gi) >= 0 )
-        whatToSay = sentence.bot
-
-      // tweet it !
-      answer = _.sample( whatToSay )
+      rules = [
+        [/[^a-z]fdp/gi, sentence.fdp],
+        [/[^a-z]tg/gi, sentence.offensive.concat(sentence.tg)],
+        [/(merci|pardon)/gi, sentence.thanks],
+        [/nike/gi, sentence.nike],
+        [/respect/gi, sentence.respect],
+        [/(ntm|(nique|niquer) ta (mère|mere))/gi, sentence.respect],
+        [/[^a-z](mere|mère)/gi, sentence.mere],
+        [/[^a-z](gueule|ballec|blc|foutre|vtf|vtff|chier|couille|couilles)/gi, sentence.offensive],
+        [/[^a-z](robot|robots|bot|bots)/gi, sentence.bot],
+        ['', sentence.smalltalk]
+      ]
 
     }
 
     /**
-     * Errrrrrrrrrror found!
+     * Check mistakes
      */
-    // do not answer to everything, just sometimes
+    // do not always answer, just sometimes
     else if ( getRandomInt(0,2) ) {
     // else if ( true ) {
 
-      if ( tweet.text.search(/[^a-z](le|du) digital/ig) >= 0 ) {
-        answer = _.sample( sentence.digital )
-      }
-
-      else if ( tweet.text.search(/[^a-z]autant pour moi/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'au temps pour moi', 'autant pour moi')
-      }
-
-      else if ( tweet.text.search(/[^a-z]parmis/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'parmi', 'parmis')
-      }
-
-      else if ( tweet.text.search(/[^a-z][^a-z]mourrir/ig) >= 0 ) {
-        answer = sentence.mourrir
-      }
-
-      else if ( tweet.text.search(/[^a-z]la faute (a|à|aux)/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'la faute de', 'la faute à')
-      }
-
-      else if ( tweet.text.search(/[^a-z]la connection/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'connexion', 'connection')
-      }
-
-      else if ( tweet.text.search(/[^a-z]j\'ai tord/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'j\'ai tort', 'j\'ai tord')
-      }
-
-      else if ( tweet.text.search(/[^a-z]t\'as tord/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 't\'as tort', 't\'as tord')
-      }
-
-      else if ( tweet.text.search(/[^a-z]sa va[^a-z]/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'ça va', 'sa va')
-      }
-
-      else if ( tweet.text.search(/[^a-z]aux (dépends|depends)/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'au dépens', 'aux dépends')
-      }
-
-      else if ( tweet.text.search(/[^a-z](malgrés|malgres)/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'malgré', 'malgrés')
-      }
-
-      else if ( tweet.text.search(/[^a-z]entrain de/ig) >= 0 ) {
-        var whatToSay = sentence.fix.concat(sentence.entrain)
-
-        answer = compile( _.sample( whatToSay ), 'en train', 'entrain')
-      }
-
-      else if ( tweet.text.search(/[^a-z]tampis/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'tant pis', 'tampis')
-      }
-
-      else if ( tweet.text.search(/(du|le) soucis/ig) >= 0 ) {
-        answer = sentence.soucis
-      }
-
-      else if ( tweet.text.search(/[^a-z]ses sa/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'c\'est ça', 'ses sa')
-      }
-
-      else if ( tweet.text.search(/[^a-z]comme (meme|même)/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'quand même', 'comme même')
-      }
-
-      else if ( tweet.text.search(/[^a-z]bonne anniversaire/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'bon anniversaire', 'bonne anniversaire')
-      }
-
-      else if ( tweet.text.search(/[^a-z]quand (à|a) (lui|toi|vous|elle)/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'quant à', 'quand à')
-      }
-
-      else if ( tweet.text.search(/[^a-z]ai fais/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'j\'ai fait', 'j\'ai fais')
-      }
-
-      else if ( tweet.text.search(/[^a-z]acceuil/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'accueil', 'acceuil')
-      }
-
-      else if ( tweet.text.search(/[^a-z]croivent/ig) >= 0) {
-        answer = sentence.croivent
-      }
-
-      else if ( tweet.text.search(/[^a-z]croive/ig) >= 0 ) {
-        answer = sentence.croive
-      }
-
-      else if ( tweet.text.search(/[^a-z]au jour d\'aujourd\'hui/ig) >= 0 ) {
-        answer = sentence.aujourdaujourdhui
-      }
-
-      else if ( tweet.text.search(/[^a-z]soit disant/ig) >= 0 ) {
-        var whatToSay = sentence.fix
-
-        answer = compile( _.sample( whatToSay ), 'soi-disant', 'soit disant')
-      }
-
+      rules = [
+        // [/(ai|as) [a-zA-Z]*er/ig, sentence.mistake.concat(sentence.participePassePremierGroupe), { original: 'er' }],
+        [/la faute (a|à|aux)/ig, sentence.fix, { original: 'la faute à', fix: 'la faute de' }],
+        [/autant pour moi/ig, sentence.fix, { original: 'autant pour moi', fix: 'au temps pour moi' }],
+        [/entrain de/ig, sentence.fix, { original: 'entrain', fix: 'en train' }],
+        [/au (coiffeur|médecin|medecin|pharmacien|notaire|dentiste|garagiste)/ig, sentence.fix, { original: 'au', fix: 'chez' }],
+        [/[^a-z]voye/ig, sentence.mistake, { original: 'voye' }],
+        [/[^a-z]voyes/ig, sentence.mistake, { original: 'voyes' }],
+        [/[^a-z](le|du) digital/ig, sentence.digital],
+        [/[^a-z]datas/ig, sentence.fix, { original: 'datas', fix: 'data' }],
+        [/[^a-z]scénarios/ig, sentence.fix, { original: 'scénarios', fix: 'scénarii' }],
+        [/[^a-z]parmis/ig, sentence.fix, { original: 'parmis', fix: 'parmi' }],
+        [/[^a-z][^a-z]mourrir/ig, sentence.mourrir],
+        [/[^a-z]la connection/ig, sentence.fix, { original: 'la connection', fix: 'la connexion' }],
+        [/j\'ai tord/ig, sentence.fix, { original: 'j\'ai tord', fix: 'j\'ai tort',  }],
+        [/[^a-z]tampis/ig, sentence.fix, { original: 'tampis', fix: 'tant pis' }],
+        [/(du|le) soucis/ig, sentence.soucis],
+        [/[^a-z]ses sa/ig, sentence.soucis, { original: 'ses sa', fix: 'c\'est ça' }],
+        [/[^a-z]comme (meme|même)/ig, sentence.fix, { original: 'comme même', fix: 'quand même' }],
+        [/bonne anniversaire/ig, sentence.fix, { original: 'bonne anniversaire', fix: 'bon anniversaire' }],
+        [/quand (à|a) (lui|toi|vous|elle)/ig, sentence.fix, { original: 'quand à', fix: 'quant à' }],
+        [/ai fais/ig, sentence.fix, { original: 'j\'ai fais', fix: 'j\'ai fait' }],
+        [/acceuil/ig, sentence.fix, { original: 'acceuil', fix: 'accueil' }],
+        [/soit disant/ig, sentence.fix, { original: 'soit disant', fix: 'soi-disant' }],
+        [/croivent/ig, sentence.croivent],
+        [/croive/ig, sentence.croive],
+        [/[^a-z]sa va[^a-z]/ig, sentence.fix, { original: 'sa va', fix: 'ça va' }],
+      ]
     }
+
+    var answer = checkAndAnswer( tweet.text, rules )
 
     // tweet if there's something to tweet
     if ( typeof answer !== 'undefined' ) {
