@@ -9,6 +9,7 @@
     "C'est quoi un hashtag ?",
     "On écrit cela tweet ou twit, je ne sais pas trop.",
     "Êtes-vous sûr(e) ?",
+    "Je suis curieux de nature.",
     "J'ai un doute tout de même.",
     "Ce n'est pas si simple.",
     "Ce n'est pas grave.",
@@ -234,6 +235,7 @@
     "Quelle classe.",
     "Voulez-vous que je m'énerve moi aussi ?",
     "Pathétique.",
+    "Allez ciao.",
     "Oh ça va hein.",
     "Taisez-vous !",
     "Bravo. 👏",
@@ -377,9 +379,18 @@
     "Oui, ce n'est pas un mauvais groupe. Après... ce n'est pas ma tasse de thé non plus."
   ],
   "mere": [
-    "Je vous dirais bien de niquer la vôtre mais ce ne serait pas très poli.",
+    "Ne seriez-vous pas puceau/pucelle pour dire cela ?",
+    "La vôtre a quel âge au juste ?",
+    "Je vous dirais bien d'aller forniquer la vôtre mais ce ne serait pas très poli.",
     "Elle va bien. (Là où elle est.)",
+    "J'espère d'ailleurs que la vôtre va bien.",
+    "Vous passerez d'ailleurs le bonjour de ma part à la vôtre.",
+    "J'espère en tout cas que la vôtre se rappelle de moi.",
     "Voulez-vous bien la laisser tranquille ?",
+    "Laissez-la là où elle est, je vous prie.",
+    "Si je parlais pareil de la vôtre, vous diriez quoi ?",
+    "Parlons plutôt de la vôtre.",
+    "Enterrée il y a déjà quelques années. :/",
     "Elle est morte, vous savez. :("
   ],
   "mourrir": [
