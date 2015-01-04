@@ -325,6 +325,7 @@
     "Hello ! On écrit cela \"{{fix}}\". 👌",
     "Savez-vous que l'on écrit cela \"{{fix}}\" ? 👌",
     "J'ai regardé dans le dictionnaire. C'est bien \"{{fix}}\" et non \"{{original}}\".",
+    "Le dictionnaire est formel. C'est bien \"{{fix}}\" et non \"{{original}}\".",
     "Bonjour. Vous avez fait une faute. C'est \"{{fix}}\" et non \"{{original}}\".",
     "J'aurais plutôt écrit cela \"{{fix}}\".",
     "Ah non, vous voulez écrire plutôt \"{{fix}}\", oui.",
@@ -376,7 +377,9 @@
     "Où vous ai-je manqué de respect au juste ?"
   ],
   "ntm": [
-    "Oui, ce n'est pas un mauvais groupe. Après... ce n'est pas ma tasse de thé non plus."
+    "Oui, ce n'est pas un mauvais groupe. Après... ce n'est pas ma tasse de thé non plus.",
+    "Ce n'est pas dans mes pratiques.",
+    "Ce sont peut-être vos pratiques mais pas les miennes."
   ],
   "mere": [
     "Ne seriez-vous pas puceau/pucelle pour dire cela ?",
@@ -394,7 +397,9 @@
     "Elle est morte, vous savez. :("
   ],
   "mourrir": [
-    "Vous savez, on ne meurt qu'une fois. Un seul \"r\" alors à \"mourir\"."
+    "Vous savez, on ne meurt qu'une fois. Un seul \"r\" alors à \"mourir\".",
+    "On ne meurt qu'une fois. Un seul \"r\" alors à \"mourir\".",
+    "Un seul \"r\" alors à \"mourir\"."
   ],
   "entrain": [
     "Pour l'expression, on écrit cela \"en train de\". L'entrain est autre chose. 👌",
@@ -403,10 +408,19 @@
     "Ce n'est pas parce que vous ne manquez pas d'entrain que vous devez faire des fautes."
   ],
   "soucis": [
-    "Souci au singulier ne prend pas de \"s\". 👌"
+    "Souci au singulier ne prend pas de \"s\". 👌",
+    "Pas de \"s\" à souci au singulier. 👌"
   ],
   "fdp": [
-    "Vous parlez bien de frais de port ?"
+    "Vous parlez bien de frais de port ?",
+    "D'ailleurs, vous devez de l'argent à ma mère.",
+    "D'ailleurs, vous lui devez de l'argent.",
+    "Frais de port ? 6€90.",
+    "6€90, colis suivi.",
+    "10€ et je vous livre cela en main propre.",
+    "Assumez-vous. Écrivez-le au moins en entier \"fils de pute\".",
+    "Toujours mieux que de toucher le RSA. D'ailleurs, qu'en est-il de vos parents ?",
+    "C'est un métier comme les autres."
   ],
   "croivent": [
     "Le verbe \"croiver\" n'existe pas. Au pluriel, on dit \"ils/elles croient\". 👌"
@@ -414,7 +428,7 @@
   "croive": [
     "Le verbe \"croiver\" n'existe pas. Au subjonctif, \"qu'il/elle croie\". 👌"
   ],
-  "aujourdaujourdhui": [
-    "Voyons. Au jour d'aujourd'hui ne veut pas dire grand chose."
+  "tord": [
+    "tort*, avec un \"t\". Pour s'en rappeler : \"le tort tue les tordus\"."
   ]
 }
