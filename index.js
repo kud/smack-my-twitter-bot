@@ -195,7 +195,7 @@ api
         [/entrain de/ig, sentence.fix.concat(sentence.entrain), { original: 'entrain', fix: 'en train' }],
         [/au (coiffeur|médecin|medecin|pharmacien|notaire|dentiste|garagiste)/ig, sentence.fix, { original: 'au', fix: 'chez' }],
         [/[^a-z]voye/ig, sentence.mistake, { original: 'voye' }],
-        [/[^a-z]je comprend/ig, sentence.mistake, { original: 'comprend', fix: 'comprends' }],
+        [/[^a-z]je comprend\W/ig, sentence.mistake, { original: 'comprend', fix: 'comprends' }],
         [/(mille|milles) lieux/ig, sentence.fix.concat(sentence.mistake), { original: 'mille lieux', fix: 'mille lieues' }],
         [/bonne (appetit|appétit)/ig, sentence.fix.concat(sentence.mistake), { original: 'bonne appétit', fix: 'bon appétit' }],
         [/[^a-z]voyes/ig, sentence.mistake, { original: 'voyes' }],
