@@ -222,7 +222,7 @@ api
         [/soit disant/ig, sentence.fix, { original: 'soit disant', fix: 'soi-disant' }],
         [/croivent/ig, sentence.croivent],
         [/croive/ig, sentence.croive],
-        [/[^a-z]sa va[^a-z]/ig, sentence.fix, { original: 'sa va', fix: 'ça va' }],
+        // [/[^a-z]sa va[^a-z]/ig, sentence.fix, { original: 'sa va', fix: 'ça va' }], // too much
       ]
     }
 
