@@ -224,6 +224,7 @@ api
         [/croivent/ig, sentence.croivent],
         [/croive/ig, sentence.croive],
         // [/[^a-z]sa va[^a-z]/ig, sentence.fix, { original: 'sa va', fix: 'ça va' }], // too much
+        [/(?!hormis)(\bh?orm(is|i)\b)/ig, sentence.mistake.concat(sentence.ormi), { fix: 'hormis' }], // It would be better to capture the word with regex and set it automatically to original
       ]
     }
 
