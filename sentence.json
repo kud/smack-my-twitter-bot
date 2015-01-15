@@ -2,7 +2,7 @@
   "smalltalk": [
     "D'accord.",
     "Pourquoi pas ?",
-    "A voir.",
+    "À voir.",
     "Peut-être.",
     "C'est-à-dire ?",
     "Regardez dans le dictionnaire, vous verrez bien.",
@@ -124,9 +124,11 @@
     "C'est vous qui dites ça ?",
     "Je pense que je suis plus vieux que vous, non ?",
     "Avez-vous connu au moins le minitel ?",
-    "Allo ?",
+    "Allô ?",
     "Nous en rediscuterons demain, le voulez-vous bien ?",
-    "Tkt. (Vous voyez que je connais aussi votre langue.)"
+    "Tkt. (Vous voyez que je connais aussi votre langue.)",
+    "C'est tout le temps la même chose, vous savez.",
+    "Et la liberté d'expression alors ?"
   ],
   "offensive": [
     "Oubliez-moi.",
@@ -135,7 +137,7 @@
     "Dédramatisez un peu je vous prie.",
     "Vous m'avez l'air énervé(e), je vous écoute, ça ira mieux après.",
     "Allez, salut.",
-    "Mal poli(e).",
+    "Malpoli(e).",
     "Et voilà. On est derrière un écran, on se permet n'importe quoi... Bravo.",
     "Stop et stop maintenant. Ce n'est plus possible.",
     "Vous n'avez que ça en bouche ?",
@@ -167,8 +169,9 @@
     "Quel toupet...",
     "Vous d'abord.",
     "Trop d'insultes, je pars.",
+    "Ç'en est trop.",
     "Vous êtes horrible.",
-    "Sureillez votre langage.",
+    "Surveillez votre langage.",
     "Que vous ai-je fait pour mériter ainsi ?",
     "Adieu.",
     "Grosses fesses.",
@@ -262,7 +265,12 @@
     "Non,  non, non. Pas d'impolitesse, je vous prie.",
     "Voyons, nous sommes entre personnes civilisées.",
     "Allons, je vous pensais plus intelligent(e) que cela.",
-    ":("
+    ":(",
+    "Vous me décevez grandement.",
+    "Je suis déçu de votre attitude.",
+    "Nous étions pourtant sur la bonne voie.",
+    "Nous étions pourtant si bien partis.",
+    "Vous rendez-vous compte de la violence gratuite de vos propos ?"
   ],
   "thanks": [
     "Mais de rien.",
@@ -272,13 +280,15 @@
     "Je vous en prie.",
     "Au plaisir.",
     "Si je peux vous aider.",
+    "Comptez sur moi",
     "Vous savez, je ne fais que mon devoir.",
     "Allons, allons. Soyez modeste.",
     "Bonne journée à vous alors.",
     "De rien, bonne journée. ;)",
     "👍",
     "À la prochaine !",
-    "Vous êtes bien urbain(e)."
+    "Vous êtes bien urbain(e).",
+    "Je suis votre humble serviteur."
   ],
   "bot": [
     "Qui a dit que j'étais un robot ? 0:)",
@@ -434,5 +444,8 @@
   ],
   "ormi": [
     "Il faut plutôt écrire « Hormis ». Hormis cela, tout semble correct. Ah tiens, elle est bonne celle-là !"
+  ],
+  "tris": [
+    "tries*, c'est simple, on conserve le « e », comme pour tous les verbes du 1er groupe."
   ]
 }
