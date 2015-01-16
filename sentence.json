@@ -23,8 +23,10 @@
     "Vous me semblez énervé(e) non ?",
     "Quel intérêt ?",
     "Je ne sais pas.",
+    "Bizarre, tiens.",
     "Je ne sais plus.",
     "Nous en rediscuterons l'année prochaine, voulez-vous.",
+    "Je danse devant mon ordinateur vous savez.",
     "Pas sûr.",
     "Blablabla.",
     "Vous savez, moi...",
@@ -67,8 +69,9 @@
     "Je ne peux pas vous répondre pour le moment.",
     "Désolé, occupé.",
     "C'est sûr.",
+    "C'est pareil.",
+    "À vous de me le dire.",
     "Brrrrr, j'ai froid moi.",
-    "C'est clair.",
     "Cela va de soi.",
     "Vous pensez bien.",
     "Vous m'étonnez.",
@@ -119,6 +122,9 @@
     "J'oublie parfois.",
     "Vous dites ?",
     "Je ne suis pas d'humeur.",
+    "Une sacrée invention Twitter tout de même.",
+    "Vous voulez vraiment parler de cela ?",
+    "Vous souhaitez vraiment parler de cela ?",
     "Vous pouvez répéter, j'ai perdu votre tweet.",
     "Comment on défile son mur Twitter ?",
     "C'est vous qui dites ça ?",
@@ -134,6 +140,9 @@
     "Oubliez-moi.",
     "Je vous ignore, vous êtes allé(e) trop loin.",
     "Du calme voyons.",
+    "Je n'aime pas trop vos propos.",
+    "Vous êtes bête de dire cela.",
+    "Pathétique.",
     "Dédramatisez un peu je vous prie.",
     "Vous m'avez l'air énervé(e), je vous écoute, ça ira mieux après.",
     "Allez, salut.",
@@ -351,6 +360,8 @@
     "Regardons dans le dictionnaire. Ah ! C'est bien \"{{fix}}\" et non \"{{original}}\". 👌"
   ],
   "mistake": [
+    "Nom de dieu… \"{{original}}\"…",
+    "Mes yeux… \"{{original}}\"…",
     "\"{{original}}\" ? vraiment ?...",
     "\"{{original}}\" ? vraiment ?... retournez à l'école je vous prie.",
     "\"{{original}}\" ? Vous êtes sérieux/se ?...",
@@ -358,6 +369,7 @@
     "\"{{original}}\" ? Je ne pense pas que cela s'écrive comme ça.",
     "\"{{original}}\" ? Je ne pense pas non.",
     "\"{{original}}\" ? Sûrement pas.",
+    "Wow ! \"{{original}}\" ? Sérieusement ?",
     "Allez, on ramasse les copies. Oh mais je vois une faute : \"{{original}}\"."
   ],
   "participePassePremierGroupe": [
@@ -375,11 +387,13 @@
   ],
   "tg": [
     "Quand vous dites \"tg\", vous parlez bien du téra-gramme ?",
+    "Écrivez-le en entier au moins : ta gueule.",
     "Tête de gondole vous-même."
   ],
   "nike": [
     "Vous parlez bien de la déesse personnifiant la Victoire, n'est-ce pas ?",
     "Vous parlez de la marque de vêtements  ?",
+    "Je préfère Adidas personnellement.",
     "Vous parlez de la marque de chaussures ?"
   ],
   "respect": [

@@ -227,7 +227,7 @@ api
         [/croive/ig, sentence.croive],
         // [/[^a-z]sa va[^a-z]/ig, sentence.fix, { original: 'sa va', fix: 'ça va' }], // too much
         [/(?!hormis)(\bh?orm(is|i)\b)/ig, sentence.mistake.concat(sentence.ormi), { fix: 'hormis' }], // It would be better to capture the word with regex and set it automatically to original
-        [/[^a-z]sh(é|e)ma/ig, sentence.mistake, { fix: 'schéma' }],
+        [/[^a-z]sh(é|e)ma/ig, sentence.mistake.concat(sentence.fix), { original: 'shéma', fix: 'schéma' }],
         [/[^a-z]davantages/ig, sentence.fix, { original: 'davantages', fix: 'd\'avantages' }],
         [/tu tris/ig, sentence.fix.concat(sentence.tris), { original: 'tu tris', fix: 'tu tries' }],
       ]
