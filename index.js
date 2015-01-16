@@ -217,14 +217,19 @@ api
         [/[^a-z]ses sa/ig, sentence.soucis, { original: 'ses sa', fix: 'c\'est ça' }],
         [/[^a-z]comme (meme|même)/ig, sentence.fix, { original: 'comme même', fix: 'quand même' }],
         [/bonne anniversaire/ig, sentence.fix, { original: 'bonne anniversaire', fix: 'bon anniversaire' }],
+        [/bon année/ig, sentence.fix, { original: 'bon année', fix: 'bonne année' }],
         [/quand (à|a) (lui|toi|vous|elle)/ig, sentence.fix, { original: 'quand à', fix: 'quant à' }],
         [/ai fais/ig, sentence.fix, { original: 'j\'ai fais', fix: 'j\'ai fait' }],
+        [/ai dis/ig, sentence.fix, { original: 'j\'ai dis', fix: 'j\'ai dit' }],
         [/acceuil/ig, sentence.fix, { original: 'acceuil', fix: 'accueil' }],
         [/soit disant/ig, sentence.fix, { original: 'soit disant', fix: 'soi-disant' }],
         [/croivent/ig, sentence.croivent],
         [/croive/ig, sentence.croive],
         // [/[^a-z]sa va[^a-z]/ig, sentence.fix, { original: 'sa va', fix: 'ça va' }], // too much
         [/(?!hormis)(\bh?orm(is|i)\b)/ig, sentence.mistake.concat(sentence.ormi), { fix: 'hormis' }], // It would be better to capture the word with regex and set it automatically to original
+        [/[^a-z]sh(é|e)ma/ig, sentence.mistake, { fix: 'schéma' }],
+        [/[^a-z]davantages/ig, sentence.fix, { original: 'davantages', fix: 'd\'avantages' }],
+        [/tu tris/ig, sentence.fix.concat(sentence.tris), { original: 'tu tris', fix: 'tu tries' }],
       ]
     }
 
