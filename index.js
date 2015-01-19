@@ -194,12 +194,12 @@ api
         // [/autant pour moi/ig, sentence.fix.concat(sentence.autantpourmoi), { original: 'autant pour moi', fix: 'au temps pour moi' }], // http://www.langue-fr.net/spip.php?article14 tl;dr: tolérance
         [/entrain de/ig, sentence.fix.concat(sentence.entrain), { original: 'entrain', fix: 'en train' }],
         [/au (coiffeur|médecin|medecin|pharmacien|notaire|dentiste|garagiste)/ig, sentence.fix, { original: 'au', fix: 'chez' }],
-        [/[^a-z]voye/ig, sentence.mistake, { original: 'voye' }],
         [/[^a-z]je comprend\W/ig, sentence.fix.concat(sentence.mistake), { original: 'je comprend', fix: 'je comprends' }],
         [/[^a-z]tous le monde\W/ig, sentence.fix.concat(sentence.mistake), { original: 'tous le monde', fix: 'tout le monde' }],
         [/(mille|milles) lieux/ig, sentence.fix.concat(sentence.mistake), { original: 'mille lieux', fix: 'mille lieues' }],
         [/bonne (appetit|appétit)/ig, sentence.fix.concat(sentence.mistake), { original: 'bonne appétit', fix: 'bon appétit' }],
-        [/[^a-z]voyes/ig, sentence.mistake, { original: 'voyes' }],
+        [/\b[^a-z]voye\b/ig, sentence.mistake, { original: 'voye' }],
+        [/\b[^a-z]voyes\b/ig, sentence.mistake, { original: 'voyes' }],
         [/[^a-z](le|du) digital/ig, sentence.digital],
         [/[^a-z]datas/ig, sentence.fix, { original: 'datas', fix: 'data' }],
         [/[^a-z]moi qui a /ig, sentence.fix, { original: 'a', fix: 'ai' }],
@@ -228,8 +228,12 @@ api
         // [/[^a-z]sa va[^a-z]/ig, sentence.fix, { original: 'sa va', fix: 'ça va' }], // too much
         [/(?!hormis)(\bh?orm(is|i)\b)/ig, sentence.mistake.concat(sentence.ormi), { fix: 'hormis' }], // It would be better to capture the word with regex and set it automatically to original
         [/[^a-z]sh(é|e)ma/ig, sentence.mistake.concat(sentence.fix), { original: 'shéma', fix: 'schéma' }],
+        [/[^a-z]sc(é|è)nette/ig, sentence.mistake.concat(sentence.fix), { original: 'scénette', fix: 'saynète' }],
         [/[^a-z]davantages/ig, sentence.fix, { original: 'davantages', fix: 'd\'avantages' }],
         [/tu tris/ig, sentence.fix.concat(sentence.tris), { original: 'tu tris', fix: 'tu tries' }],
+        [/[^a-z](le|un|du) magasine/ig, sentence.fix.concat(sentence.magasine), { original: 'magasine', fix: 'magazine' }],
+        [/[^a-z](le|un|du) magazin/ig, sentence.fix.concat(sentence.magazin), { original: 'magazin', fix: 'magasin' }],
+        [/[^a-z](ai|as|a|avons|avez|ont) été chez/ig, sentence.aiété], // Can't really track `été (au|à)` at the moment
       ]
     }
 

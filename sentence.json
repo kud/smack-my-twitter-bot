@@ -49,7 +49,7 @@
     "Ok, on se reparle plus tard.",
     "Comment allez-vous ?",
     "Je ne fais que passer sur Twitter.",
-    "Je débute encore un peu, je ne maîtrise pas tout internet.",
+    "Je débute encore un peu, je ne maîtrise pas tout Internet.",
     "Pouvez-vous m'aider ?",
     "Une petite partie de Scrabble par hasard ?",
     "Une petite partie de Scrabble, ça vous dit ?",
@@ -80,7 +80,7 @@
     "Sinon vous écoutez quoi comme musique.",
     "J'adore la musique classique, pas vous ?",
     "J'ai des choses à vendre sur le bon coin si vous voulez.",
-    "J'ai mal au dos moi, je crois que je vais arrêter internet pour aujourd'hui.",
+    "J'ai mal au dos moi, je crois que je vais arrêter Internet pour aujourd'hui.",
     "Tout dépend du contexte.",
     "Il fait beau aujourd'hui. Vous avez quel temps ?",
     "Je comprends, ce n'est pas facile.",
@@ -134,7 +134,18 @@
     "Nous en rediscuterons demain, le voulez-vous bien ?",
     "Tkt. (Vous voyez que je connais aussi votre langue.)",
     "C'est tout le temps la même chose, vous savez.",
-    "Et la liberté d'expression alors ?"
+    "Et la liberté d'expression alors ?",
+    "Vous connaissez de bons calembours ?",
+    "Dites-moi, vous savez ce qu'est un palindrome ?",
+    "J'adore les palindromes.",
+    "Quels palindromes connaissez-vous ?"
+    "« Éric notre valet alla te laver ton ciré. » C'est mon palindrome favori.",
+    "« Ésope reste ici et se repose. » C'est une phrase que l'on peut lire dans les deux sens.",
+    "Est-ce puriste de vouloir appeler un chat un chat ?",
+    "Les mots s'affaiblissent, vous savez.",
+    "Le plus grotesque, c'est d'inventer, dans le langage français courant, des mots anglais qui n'existent pas.",
+    "Je suis verbicruciste à mes heures perdues. Et vous ?",
+    "Et si on se faisait une grille de mots-fléchés ?"
   ],
   "offensive": [
     "Oubliez-moi.",
@@ -150,7 +161,7 @@
     "Et voilà. On est derrière un écran, on se permet n'importe quoi... Bravo.",
     "Stop et stop maintenant. Ce n'est plus possible.",
     "Vous n'avez que ça en bouche ?",
-    "Nous en rediscuterons une fois la tête reposée parce que là...",
+    "Nous en rediscuterons à tête reposée parce que là...",
     "Nous en rediscuterons demain... lorsque vous vous serez calmé(e)",
     "Stop.",
     "Je ne suis pas sur Twitter pour me faire insulter.",
@@ -275,11 +286,15 @@
     "Voyons, nous sommes entre personnes civilisées.",
     "Allons, je vous pensais plus intelligent(e) que cela.",
     ":(",
+    "Je ne vous félicite pas.",
     "Vous me décevez grandement.",
     "Je suis déçu de votre attitude.",
     "Nous étions pourtant sur la bonne voie.",
     "Nous étions pourtant si bien partis.",
-    "Vous rendez-vous compte de la violence gratuite de vos propos ?"
+    "Vous rendez-vous compte de la violence gratuite de vos propos ?",
+    "Toujours amusant, jamais vulgaire.",
+    "C'est très fin.",
+    "Tout en subtilité."
   ],
   "thanks": [
     "Mais de rien.",
@@ -289,7 +304,7 @@
     "Je vous en prie.",
     "Au plaisir.",
     "Si je peux vous aider.",
-    "Comptez sur moi",
+    "Comptez sur moi.",
     "Vous savez, je ne fais que mon devoir.",
     "Allons, allons. Soyez modeste.",
     "Bonne journée à vous alors.",
@@ -297,7 +312,8 @@
     "👍",
     "À la prochaine !",
     "Vous êtes bien urbain(e).",
-    "Je suis votre humble serviteur."
+    "Je suis votre humble serviteur.",
+    "Vous êtes de bon aloi."
   ],
   "bot": [
     "Qui a dit que j'étais un robot ? 0:)",
@@ -388,7 +404,9 @@
   "tg": [
     "Quand vous dites \"tg\", vous parlez bien du téra-gramme ?",
     "Écrivez-le en entier au moins : ta gueule.",
-    "Tête de gondole vous-même."
+    "Tête de gondole vous-même.",
+    "Allez, tournée générale !",
+    "Un beau département le Tarn-et-Garonne (82)."
   ],
   "nike": [
     "Vous parlez bien de la déesse personnifiant la Victoire, n'est-ce pas ?",
@@ -429,8 +447,9 @@
   "entrain": [
     "Pour l'expression, on écrit cela \"en train de\". L'entrain est autre chose. 👌",
     "Vous êtes en train de faire une faute avec entrain.",
-    "Tchouuuu tchouuuuuu. Pardon. on écrit cela \"en train de\".",
-    "Ce n'est pas parce que vous ne manquez pas d'entrain que vous devez faire des fautes."
+    "Tchouuuu tchouuuuuu. Pardon. On écrit cela \"en train de\".",
+    "Ce n'est pas parce que vous ne manquez pas d'entrain que vous devez faire des fautes.",
+    "Ah, mais quel(le) boute-en-train vous faites ! On écrit cela \"en train de\"."
   ],
   "soucis": [
     "Souci au singulier ne prend pas de \"s\". 👌",
@@ -461,5 +480,16 @@
   ],
   "tris": [
     "tries*, c'est simple, on conserve le « e », comme pour tous les verbes du 1er groupe."
+  ],
+  "magazin": [
+    "Allez, je vous donne un truc, « magasin » prend un « s » comme dans « supermarché »."
+  ],
+  "magasine": [
+    "Rappelez-vous que « magazine » prend un « z » comme « gazette »."
+  ],
+  "aiété":[
+    "S’il y a une notion de mouvement, utilisez plutôt « être + aller ». Par exemple : « Je suis allé. »",
+    "C'est beaucoup trop familier ! Essayez cela « Je suis allé, tu es allé, il est allé, etc. »",
+    "Soyez plus soigneux. On écrit cela avec l'auxiliaire être + le verbe aller. Essayez, vous verrez."
   ]
 }
