@@ -3,13 +3,14 @@ console.log('') // cleaner
 /**
  * Import
  */
-var chalk     = require('chalk')
-var Twit      = require('twit')
-var _         = require('lodash')
-var compile   = require('bloody-compile')
-var settings  = require('./settings.json')
-var track     = require('./track.json')
-var sentence  = require('./sentence.json')
+var chalk    = require('chalk')
+var Twit     = require('twit')
+var _        = require('lodash')
+var moment   = require('moment');
+var compile  = require('bloody-compile')
+var settings = require('./settings.json')
+var track    = require('./track.json')
+var sentence = require('./sentence.json')
 
 /**
  * Functions
@@ -138,6 +139,10 @@ api
   .stream('statuses/filter', streamParam)
   .on('tweet', function( tweet ) {
 
+    // show tweet before being filtered
+    // console.log( chalk.bgBlack('Stream   —'), tweet ) // show all tweet
+
+
     // blacklisted? do not answer
     if ( _.indexOf( settings.blacklist, tweet.user.screen_name ) >= 0 ) return
 
@@ -150,12 +155,18 @@ api
       // don't care about small accounts
       if ( tweet.user.followers_count < settings.followerLimit ) return
 
+      // don't care about too recent accounts
+      if ( settings.yearLimit !== 0 && moment( new Date( tweet.user.created_at ) ).year() > settings.yearLimit ) return
+
+      // don't care about protected accounts
+      if ( tweet.user.protected ) return
+
       // don't care about some languages
       if ( !(tweet.lang === 'fr' || tweet.lang === 'en') ) return
 
     }
 
-    // show tweet
+    // show tweet after being filtered
     console.log( chalk.bgBlack('Stream   —'), chalk.bgWhite( chalk.black('@' + tweet.user.screen_name ) ) + ' ' + tweet.text )
     // console.log( chalk.bgBlack('Stream   —'), tweet ) // show all tweet
 
