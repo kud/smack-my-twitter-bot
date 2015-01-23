@@ -55,7 +55,7 @@
     "Une petite partie de Scrabble, ça vous dit ?",
     "Savez-vous si on peut jouer au Scrabble en ligne ?",
     "Les dés sont lancés.",
-    "\"lol\".",
+    "« LOL ».",
     "Je n'ai pas sommeil.",
     "Je ne vous déteste pas, vous savez.",
     "Allons, allons.",
@@ -139,13 +139,14 @@
     "Dites-moi, vous savez ce qu'est un palindrome ?",
     "J'adore les palindromes.",
     "Quels palindromes connaissez-vous ?",
-    "« Éric notre valet alla te laver ton ciré. » C'est mon palindrome favori.",
-    "« Ésope reste ici et se repose. » C'est une phrase que l'on peut lire dans les deux sens.",
+    "« Éric notre valet alla te laver ton ciré. » C'est mon palindrome favori.",
+    "« Ésope reste ici et se repose. » C'est une phrase que l'on peut lire dans les deux sens.",
     "Est-ce puriste de vouloir appeler un chat un chat ?",
     "Les mots s'affaiblissent, vous savez.",
     "Le plus grotesque, c'est d'inventer, dans le langage français courant, des mots anglais qui n'existent pas.",
     "Je suis verbicruciste à mes heures perdues. Et vous ?",
-    "Et si on se faisait une grille de mots-fléchés ?"
+    "Et si on se faisait une grille de mots-fléchés ?",
+    "Oui mais dans une certaine mesure seulement."
   ],
   "offensive": [
     "Oubliez-moi.",
@@ -330,67 +331,67 @@
     "Parlez-moi, vous verrez bien."
   ],
   "fix": [
-    "Attention à vous, c'est \"{{fix}}\", non pas \"{{original}}\".",
-    "J'ai regardé dans le dictionnaire pour vous et j'ai vu que c'était \"{{fix}}\", non pas \"{{original}}\".",
-    "Vous n'aimez pas la langue française ? \"{{fix}}\", non pas \"{{original}}\".",
-    "Respectez donc un peu la langue française s'il vous plait. \"{{fix}}\", non pas \"{{original}}\".",
-    "\"{{fix}}\", non pas \"{{original}}\". Allez, on supprime son tweet, et on recommence s'il vous plait.",
-    "Je suis désolé de m'incruster mais c'est \"{{fix}}\" et non pas \"{{original}}\".",
-    "Excusez-moi mais c'est \"{{fix}}\" et non pas \"{{original}}\".",
-    "Je n'aime pas les fautes. C'est \"{{fix}}\", non pas \"{{original}}\".",
-    "Je me permets d'intervenir dans la discussion. On écrit \"{{fix}}\" et non pas \"{{original}}\".",
-    "Excusez-moi d'intervenir mais c'est \"{{fix}}\" et non pas \"{{original}}\".",
-    "Où avez-vous vu que c'était \"{{original}}\" ? C'est plutôt \"{{fix}}\".",
-    "On écrit \"{{fix}}\", on n'écrit pas \"{{original}}\".",
-    "Faites plus attention. \"{{fix}}\" et non \"{{original}}\".",
-    "Je vous en prie : \"{{fix}}\"*",
-    "Allez, on se corrige : \"{{fix}}\"*",
-    "Prenez votre temps avant d'écrire, vous faites des fautes. \"{{fix}}\" et non \"{{original}}\".",
-    "Ce n'est pas parce qu'on écrit vite que l'on doit mal écrire. \"{{original}}\" s'écrit \"{{fix}}\".",
-    "Belle faute \"{{original}}\", vraiment. Allez, allez. On écrit ça \"{{fix}}\".",
-    "Je ne crois pas qu'on puisse écrire \"{{original}}\" mais plutôt \"{{fix}}\".",
-    "Et pourquoi pas \"{{fix}}\" au lieu de \"{{original}}\" ?",
-    "Non, non et non ! On écrit cela \"{{fix}}\" mais sûrement pas \"{{original}}\".",
-    "...ou plutôt \"{{fix}}\". 👌",
-    "On se relâche là. \"{{fix}}\" et non \"{{original}}\". 👌",
-    "Ah non, c'est \"{{fix}}\". 👌",
-    "Vous êtes sûr(e) que ce n'est pas plutôt \"{{fix}}\" ?",
+    "Attention à vous, c'est « {{fix}} », non pas « {{original}} ».",
+    "J'ai regardé dans le dictionnaire pour vous et j'ai vu que c'était « {{fix}} », non pas « {{original}} ».",
+    "Vous n'aimez pas la langue française ? « {{fix}} », non pas « {{original}} ».",
+    "Respectez donc un peu la langue française s'il vous plait. « {{fix}} », non pas « {{original}} ».",
+    "« {{fix}} », non pas « {{original}} ». Allez, on supprime son tweet, et on recommence s'il vous plait.",
+    "Je suis désolé de m'incruster mais c'est « {{fix}} » et non pas « {{original}} ».",
+    "Excusez-moi mais c'est « {{fix}} » et non pas « {{original}} ».",
+    "Je n'aime pas les fautes. C'est « {{fix}} », non pas « {{original}} ».",
+    "Je me permets d'intervenir dans la discussion. On écrit « {{fix}} » et non pas « {{original}} ».",
+    "Excusez-moi d'intervenir mais c'est « {{fix}} » et non pas « {{original}} ».",
+    "Où avez-vous vu que c'était « {{original}} » ? C'est plutôt « {{fix}} ».",
+    "On écrit « {{fix}} », on n'écrit pas « {{original}} ».",
+    "Faites plus attention. « {{fix}} » et non « {{original}} ».",
+    "Je vous en prie : « {{fix}} »*",
+    "Allez, on se corrige : « {{fix}} »*",
+    "Prenez votre temps avant d'écrire, vous faites des fautes. « {{fix}} » et non « {{original}} ».",
+    "Ce n'est pas parce qu'on écrit vite que l'on doit mal écrire. « {{original}} » s'écrit « {{fix}} ».",
+    "Belle faute « {{original}} », vraiment. Allez, allez. On écrit ça « {{fix}} ».",
+    "Je ne crois pas qu'on puisse écrire « {{original}} » mais plutôt « {{fix}} ».",
+    "Et pourquoi pas « {{fix}} » au lieu de « {{original}} » ?",
+    "Non, non et non ! On écrit cela « {{fix}} » mais sûrement pas « {{original}} ».",
+    "...ou plutôt « {{fix}} ». 👌",
+    "On se relâche là. « {{fix}} » et non « {{original}} ». 👌",
+    "Ah non, c'est « {{fix}} ». 👌",
+    "Vous êtes sûr(e) que ce n'est pas plutôt « {{fix}} » ?",
     "{{fix}}* 👌",
-    "\"{{original}}\" ≻ \"{{fix}}\" 👌",
-    "Vous vouliez dire \"{{fix}}\", n'est-ce pas ?",
-    "\"{{fix}}\", nuance. 👌",
-    "Hello ! On écrit cela \"{{fix}}\". 👌",
-    "Savez-vous que l'on écrit cela \"{{fix}}\" ? 👌",
-    "J'ai regardé dans le dictionnaire. C'est bien \"{{fix}}\" et non \"{{original}}\".",
-    "Le dictionnaire est formel. C'est bien \"{{fix}}\" et non \"{{original}}\".",
-    "Bonjour. Vous avez fait une faute. C'est \"{{fix}}\" et non \"{{original}}\".",
-    "J'aurais plutôt écrit cela \"{{fix}}\".",
-    "Ah non, vous voulez écrire plutôt \"{{fix}}\", oui.",
-    "Attention ! On dit \"{{fix}}\" et non \"{{original}}\". 👌",
-    "Hop hop hop ! On dit \"{{fix}}\" et non \"{{original}}\".",
-    "Faites donc un peu attention à votre français. \"{{fix}}\", non pas \"{{original}}\".",
-    "Les bras m'en tombent. \"{{fix}}\", non pas \"{{original}}\".",
-    "Correction faite ! \"{{fix}}\", non pas \"{{original}}\".",
-    "\"{{original}}\" ? vraiment ?... \"{{fix}}\" plutôt oui.",
-    "\"{{original}}\" ? vraiment ?... retournez à l'école je vous prie. C'est \"{{fix}}\".",
-    "\"{{original}}\" ? Vous êtes sérieux/se ?... \"{{fix}}\" plutôt oui.",
-    "Regardons dans le dictionnaire. Ah ! C'est bien \"{{fix}}\" et non \"{{original}}\". 👌"
+    "« {{original}} » --≻ « {{fix}} » 👌",
+    "Vous vouliez dire « {{fix}} », n'est-ce pas ?",
+    "« {{fix}} », nuance. 👌",
+    "Hello ! On écrit cela « {{fix}} ». 👌",
+    "Savez-vous que l'on écrit cela « {{fix}} » ? 👌",
+    "J'ai regardé dans le dictionnaire. C'est bien « {{fix}} » et non « {{original}} ».",
+    "Le dictionnaire est formel. C'est bien « {{fix}} » et non « {{original}} ».",
+    "Bonjour. Vous avez fait une faute. C'est « {{fix}} » et non « {{original}} ».",
+    "J'aurais plutôt écrit cela « {{fix}} ».",
+    "Ah non, vous voulez écrire plutôt « {{fix}} », oui.",
+    "Attention ! On dit « {{fix}} » et non « {{original}} ». 👌",
+    "Hop hop hop ! On dit « {{fix}} » et non « {{original}} ».",
+    "Faites donc un peu attention à votre français. « {{fix}} », non pas « {{original}} ».",
+    "Les bras m'en tombent. « {{fix}} », non pas « {{original}} ».",
+    "Correction faite ! « {{fix}} », non pas « {{original}} ».",
+    "« {{original}} » ? Vraiment ?... « {{fix}} » plutôt oui.",
+    "« {{original}} » ? Vraiment ?... retournez à l'école je vous prie. C'est « {{fix}} ».",
+    "« {{original}} » ? Vous êtes sérieux/se ?... « {{fix}} » plutôt oui.",
+    "Regardons dans le dictionnaire. Ah ! C'est bien « {{fix}} » et non « {{original}} ». 👌"
   ],
   "mistake": [
-    "Nom de dieu… \"{{original}}\"…",
-    "Mes yeux… \"{{original}}\"…",
-    "\"{{original}}\" ? vraiment ?...",
-    "\"{{original}}\" ? vraiment ?... retournez à l'école je vous prie.",
-    "\"{{original}}\" ? Vous êtes sérieux/se ?...",
-    "\"{{original}}\" ? Ça ne va pas mieux hein...",
-    "\"{{original}}\" ? Je ne pense pas que cela s'écrive comme ça.",
-    "\"{{original}}\" ? Je ne pense pas non.",
-    "\"{{original}}\" ? Sûrement pas.",
-    "Wow ! \"{{original}}\" ? Sérieusement ?",
-    "Allez, on ramasse les copies. Oh mais je vois une faute : \"{{original}}\"."
+    "Nom de dieu… « {{original}} »…",
+    "Mes yeux… « {{original}} »…",
+    "« {{original}} » ? Vraiment ?...",
+    "« {{original}} » ? Vraiment ?... retournez à l'école je vous prie.",
+    "« {{original}} » ? Vous êtes sérieux/se ?...",
+    "« {{original}} » ? Ça ne va pas mieux hein...",
+    "« {{original}} » ? Je ne pense pas que cela s'écrive comme ça.",
+    "« {{original}} » ? Je ne pense pas non.",
+    "« {{original}} » ? Sûrement pas.",
+    "Wow ! « {{original}} » ? Sérieusement ?",
+    "Allez, on ramasse les copies. Oh mais je vois une faute : « {{original}} »."
   ],
   "participePassePremierGroupe": [
-    "Participe passé du premier groupe avec l'auxiliaire \"avoir\", c'est \"é\" et non \"er\"."
+    "Participe passé du premier groupe avec l'auxiliaire « avoir », c'est « é » et non « er »."
   ],
   "digital": [
     "Oui, c'est toujours mieux avec les doigts. ;)",
@@ -403,7 +404,7 @@
     "Ne dit-on pas plutôt le numérique ?"
   ],
   "tg": [
-    "Quand vous dites \"tg\", vous parlez bien du téra-gramme ?",
+    "Quand vous dites « tg », vous parlez bien du téra-gramme ?",
     "Écrivez-le en entier au moins : ta gueule.",
     "Tête de gondole vous-même.",
     "Allez, tournée générale !",
@@ -411,7 +412,7 @@
   ],
   "nike": [
     "Vous parlez bien de la déesse personnifiant la Victoire, n'est-ce pas ?",
-    "Vous parlez de la marque de vêtements  ?",
+    "Vous parlez de la marque de vêtements ?",
     "Je préfère Adidas personnellement.",
     "Vous parlez de la marque de chaussures ?"
   ],
@@ -441,20 +442,20 @@
     "Elle est morte, vous savez. :("
   ],
   "mourrir": [
-    "Vous savez, on ne meurt qu'une fois. Un seul \"r\" alors à \"mourir\".",
-    "On ne meurt qu'une fois. Un seul \"r\" alors à \"mourir\".",
-    "Un seul \"r\" alors à \"mourir\"."
+    "Vous savez, on ne meurt qu'une fois. Un seul « r » alors à « mourir ».",
+    "On ne meurt qu'une fois. Un seul « r » alors à « mourir ».",
+    "Un seul « r » alors à « mourir »."
   ],
   "entrain": [
-    "Pour l'expression, on écrit cela \"en train de\". L'entrain est autre chose. 👌",
+    "Pour l'expression, on écrit cela « en train de ». L'entrain est autre chose. 👌",
     "Vous êtes en train de faire une faute avec entrain.",
-    "Tchouuuu tchouuuuuu. Pardon. On écrit cela \"en train de\".",
+    "Tchouuuu tchouuuuuu. Pardon. On écrit cela « en train de ».",
     "Ce n'est pas parce que vous ne manquez pas d'entrain que vous devez faire des fautes.",
-    "Ah, mais quel(le) boute-en-train vous faites ! On écrit cela \"en train de\"."
+    "Ah, mais quel(le) boute-en-train vous faites ! On écrit cela « en train de »."
   ],
   "soucis": [
-    "Souci au singulier ne prend pas de \"s\". 👌",
-    "Pas de \"s\" à souci au singulier. 👌"
+    "Souci au singulier ne prend pas de « s ». 👌",
+    "Pas de « s » à souci au singulier. 👌"
   ],
   "fdp": [
     "Vous parlez bien de frais de port ?",
@@ -463,34 +464,34 @@
     "Frais de port ? 6€90.",
     "6€90, colis suivi.",
     "10€ et je vous livre cela en main propre.",
-    "Assumez-vous. Écrivez-le au moins en entier \"fils de pute\".",
+    "Assumez-vous. Écrivez-le au moins en entier « fils de pute ».",
     "Toujours mieux que de toucher le RSA. D'ailleurs, qu'en est-il de vos parents ?",
     "C'est un métier comme les autres."
   ],
   "croivent": [
-    "Le verbe \"croiver\" n'existe pas. Au pluriel, on dit \"ils/elles croient\". 👌"
+    "Le verbe « croiver » n'existe pas. Au pluriel, on dit « ils/elles croient ». 👌"
   ],
   "croive": [
-    "Le verbe \"croiver\" n'existe pas. Au subjonctif, \"qu'il/elle croie\". 👌"
+    "Le verbe « croiver » n'existe pas. Au subjonctif, « qu'il/elle croie ». 👌"
   ],
   "tord": [
-    "tort*, avec un \"t\". Pour s'en rappeler : \"le tort tue les tordus\"."
+    "tort*, avec un « t ». Pour s'en rappeler : « le tort tue les tordus »."
   ],
   "ormi": [
     "Il faut plutôt écrire « Hormis ». Hormis cela, tout semble correct. Ah tiens, elle est bonne celle-là !"
   ],
   "tris": [
-    "tries*, c'est simple, on conserve le « e », comme pour tous les verbes du 1er groupe."
+    "tries*, c'est simple, on conserve le « e », comme pour tous les verbes du 1er groupe."
   ],
   "magazin": [
-    "Allez, je vous donne un truc, « magasin » prend un « s » comme dans « supermarché »."
+    "Allez, je vous donne un truc, « magasin » prend un « s » comme dans « supermarché »."
   ],
   "magasine": [
-    "Rappelez-vous que « magazine » prend un « z » comme « gazette »."
+    "Rappelez-vous que « magazine » prend un « z » comme « gazette »."
   ],
   "aiété":[
-    "S’il y a une notion de mouvement, utilisez plutôt « être + aller ». Par exemple : « Je suis allé. »",
-    "C'est beaucoup trop familier ! Essayez cela « Je suis allé, tu es allé, il est allé, etc. »",
+    "S’il y a une notion de mouvement, utilisez plutôt « être + aller ». Par exemple : « Je suis allé. »",
+    "C'est beaucoup trop familier ! Essayez cela « Je suis allé, tu es allé, il est allé, etc. »",
     "Soyez plus soigneux. On écrit cela avec l'auxiliaire être + le verbe aller. Essayez, vous verrez."
   ]
 }
