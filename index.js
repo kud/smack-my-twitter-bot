@@ -204,6 +204,7 @@ api
         [/la faute (a|à|aux)/ig, sentence.fix, { original: 'la faute à', fix: 'la faute de' }],
         // [/autant pour moi/ig, sentence.fix.concat(sentence.autantpourmoi), { original: 'autant pour moi', fix: 'au temps pour moi' }], // http://www.langue-fr.net/spip.php?article14 tl;dr: tolérance
         [/entrain de/ig, sentence.fix.concat(sentence.entrain), { original: 'entrain', fix: 'en train' }],
+        [/recrute[\w\s]+stagiaire/ig, sentence.stagiaire, {}],
         [/au (coiffeur|médecin|medecin|pharmacien|notaire|dentiste|garagiste)/ig, sentence.fix, { original: 'au', fix: 'chez' }],
         [/[^a-z]je comprend\W/ig, sentence.fix.concat(sentence.mistake), { original: 'je comprend', fix: 'je comprends' }],
         [/[^a-z]tous le monde\W/ig, sentence.fix.concat(sentence.mistake), { original: 'tous le monde', fix: 'tout le monde' }],
