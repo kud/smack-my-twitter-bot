@@ -223,6 +223,7 @@ api
         [/[^a-z]discution/ig, sentence.fix, { original: 'discution', fix: 'discussion' }],
         [/[^a-z][^a-z]mourrir/ig, sentence.mourrir],
         [/[^a-z]la connection/ig, sentence.fix, { original: 'la connection', fix: 'la connexion' }],
+        [/[^a-z]quizz/ig, sentence.fix, { original: 'quizz', fix: 'quiz' }],
         [/j\'ai tord/ig, sentence.fix.concat(sentence.tord), { original: 'j\'ai tord', fix: 'j\'ai tort',  }],
         [/[^a-z]tampis/ig, sentence.fix, { original: 'tampis', fix: 'tant pis' }],
         [/(du|le) soucis/ig, sentence.soucis],
