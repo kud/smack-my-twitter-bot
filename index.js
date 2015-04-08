@@ -230,6 +230,7 @@ api
         [/[^a-z]ses sa/ig, sentence.soucis, { original: 'ses sa', fix: 'c\'est ça' }],
         [/[^a-z]comme (meme|même)/ig, sentence.fix, { original: 'comme même', fix: 'quand même' }],
         [/[^a-z](fait|faire) sens/ig, sentence.faireSens],
+        [/[^a-z]aimerai bien/ig, sentence.fix, { original: 'aimerai bien', fix: 'aimerais bien' }],
         [/bonne anniversaire/ig, sentence.fix, { original: 'bonne anniversaire', fix: 'bon anniversaire' }],
         [/bon année/ig, sentence.fix, { original: 'bon année', fix: 'bonne année' }],
         [/quand (à|a) (lui|toi|vous|elle)/ig, sentence.fix, { original: 'quand à', fix: 'quant à' }],
