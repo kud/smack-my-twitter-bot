@@ -249,6 +249,7 @@ api
         [/[^a-z](le|un|du) magasine/ig, sentence.fix.concat(sentence.magasine), { original: 'magasine', fix: 'magazine' }],
         [/[^a-z](le|un|du) magazin/ig, sentence.fix.concat(sentence.magazin), { original: 'magazin', fix: 'magasin' }],
         [/[^a-z](ai|as|a|avons|avez|ont) été chez/ig, sentence.aiété], // Can't really track `été (au|à)` at the moment
+        [/sur la bonne voix/ig, sentence.surLaBonneVoix]
       ]
     }
 
