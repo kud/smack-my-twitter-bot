@@ -2,7 +2,7 @@
 
 > A fixer, a solver.
 
-## Installation
+## Install
 
 ```console
 $ npm install && cp settings.json.dist settings.json
@@ -10,6 +10,10 @@ $ npm install && cp settings.json.dist settings.json
 
 ## Usage
 
+First of all, create a new twitter application and copy/paste the token in `settings.json`.
+
+After:
+
 ```console
-$ npm start
+$ npm (run) start
 ```
