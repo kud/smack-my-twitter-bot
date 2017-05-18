@@ -1,4 +1,4 @@
-# Smack My Twitter Bot
+# Smack My Twitter Bot 👌🏻
 
 > A fixer, a solver.
 
