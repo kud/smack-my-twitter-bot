@@ -1,16 +1,17 @@
+'use strict';
 console.log('') // cleaner
 
 /**
  * Import
  */
-var chalk    = require('chalk')
-var Twit     = require('twit')
-var _        = require('lodash')
-var moment   = require('moment');
-var compile  = require('bloody-compile')
-var settings = require('./settings.json')
-var track    = require('./track.json')
-var sentence = require('./sentence.json')
+const chalk    = require('chalk')
+const Twit     = require('twit')
+const _        = require('lodash')
+const moment   = require('moment')
+const compile  = require('bloody-compile')
+const settings = require('./settings.json')
+const track    = require('./track.json')
+const sentence = require('./sentence.json')
 
 /**
  * Functions
@@ -20,7 +21,7 @@ var sentence = require('./sentence.json')
  * Returns a random integer between min (included) and max (excluded)
  * Using Math.round() will give you a non-uniform distribution!
  */
-var getRandomInt = function( min, max ) {
+const getRandomInt = ( min, max ) => {
   return Math.floor(Math.random() * (max - min)) + min
 }
 
@@ -30,20 +31,20 @@ var getRandomInt = function( min, max ) {
  * @param  {string} message
  * @return {void}
  */
-var tweetThat = function( tweet, message ) {
+const tweetThat = ( tweet, message ) => {
 
   // do not answer to yourself, buddy.
   if ( tweet.user.screen_name !== username ) {
 
-    var postParam = {
+    const postParam = {
       in_reply_to_status_id: tweet.id_str,
-      status: "@" + tweet.user.screen_name + " " + message
+      status: `@${tweet.user.screen_name} ${message}`
     }
 
     // make it not so much bot
-    setTimeout(function() {
+    setTimeout(() => {
 
-      api.post('statuses/update', postParam, function( err, data, response ) {
+      api.post('statuses/update', postParam, ( err, data, response ) => {
 
         console.log('')
         console.log( chalk.bgBlue( chalk.black('Tweet    —') ), chalk.bgWhite( chalk.black('@' + tweet.user.screen_name ) ) + ' ' + tweet.text )
@@ -68,7 +69,7 @@ var tweetThat = function( tweet, message ) {
  * @param  {object} replacement
  * @return {string|false}
  */
-var handleAnswer = function( text, regex, answers, replacement ) {
+const handleAnswer = ( text, regex, answers, replacement ) => {
 
   if ( text.search( regex ) >= 0 ) {
     return compile( _.sample( answers ), replacement )
@@ -92,11 +93,11 @@ var handleAnswer = function( text, regex, answers, replacement ) {
  *      [/[^a-z]sa va[^a-z]/ig, ['pas d\'accord']]
  *    ]
  */
-var checkAndAnswer = function( text, rules ) {
+const checkAndAnswer = function( text, rules ) {
 
-  var status = undefined
+  let status = undefined
 
-  var i = 0
+  let i = 0
 
   while ( status === undefined ) {
 
@@ -122,13 +123,13 @@ var checkAndAnswer = function( text, rules ) {
 /**
  * Definition
  */
-var api      = new Twit( settings.twitterKeys )
-var username = settings.username
+const api      = new Twit( settings.twitterKeys )
+const username = settings.username
 
-var trackedWords = track
+const trackedWords = track
 trackedWords.push( username ) // add username to be tracked
 
-var streamParam = {
+const streamParam = {
   track: trackedWords
 }
 
@@ -170,7 +171,7 @@ api
     console.log( chalk.bgBlack('Stream   —'), chalk.bgWhite( chalk.black('@' + tweet.user.screen_name ) ) + ' ' + tweet.text )
     // console.log( chalk.bgBlack('Stream   —'), tweet ) // show all tweet
 
-    var rules = []
+    let rules = []
 
     /**
      * Replies
@@ -224,7 +225,7 @@ api
         [/[^a-z][^a-z]mourrir/ig, sentence.mourrir],
         [/[^a-z]la connection/ig, sentence.fix, { original: 'la connection', fix: 'la connexion' }],
         [/[^a-z]quizz/ig, sentence.fix, { original: 'quizz', fix: 'quiz' }],
-        [/j\'ai tord/ig, sentence.fix.concat(sentence.tord), { original: 'j\'ai tord', fix: 'j\'ai tort',  }],
+        [/j\'ai tord/ig, sentence.fix.concat(sentence.tord), { original: 'j\'ai tord', fix: 'j\'ai tort' }],
         [/[^a-z]tampis/ig, sentence.fix, { original: 'tampis', fix: 'tant pis' }],
         [/(du|le) soucis/ig, sentence.soucis],
         [/[^a-z]ses sa/ig, sentence.soucis, { original: 'ses sa', fix: 'c\'est ça' }],
@@ -255,7 +256,7 @@ api
       ]
     }
 
-    var answer = checkAndAnswer( tweet.text, rules )
+    const answer = checkAndAnswer( tweet.text, rules )
 
     // tweet if there's something to tweet
     if ( typeof answer !== 'undefined' ) {
