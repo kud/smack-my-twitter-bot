@@ -5,7 +5,7 @@
 ## Install
 
 ```console
-$ npm install && cp settings.json.dist settings.json
+$ npm install
 ```
 
 ## Usage
