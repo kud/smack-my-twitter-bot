@@ -1,47 +1,47 @@
+import Twit from 'twit'
+
 import _ from 'lodash'
 import chalk from 'chalk'
 import moment from 'moment'
 
-import settings from '../settings.json'
-const { bot: botSettings, recipient: recipientSettings } = settings
+import settings from '../../settings.json'
+const {
+  api: apiSettings,
+  bot: botSettings,
+  recipient: recipientSettings,
+} = settings
 
-import getRandomInt from './lib/getRandomInt'
+import apisService from './apis'
+import logService from './log'
 
 const tweetService = {
   debug(tweet) {
-    console.log('')
-    console.log(chalk.black.bgGreen('### Tweet ###'))
-    console.log(tweet)
-    console.log(chalk.black.bgGreen('###  End  ###'))
-    console.log('')
+    logService.message({
+      title: 'Debug',
+      message: tweet,
+    })
   },
 
   displayStream(tweet) {
-    console.log(
-      chalk.bgBlack(chalk.white(` Stream   — `)),
-      chalk.bgWhite(chalk.black(` @${tweet.user.screen_name} `)),
-      '\n\n',
-      tweet.text,
-      '\n'
-    )
+    logService.message({
+      title: 'Stream',
+      subtitle: `@${tweet.user.screen_name}`,
+      message: tweet.text,
+    })
   },
 
-  displayAnswer(tweet, message) {
-    console.log(
-      chalk.bgBlue(chalk.black(` Tweet    — `)),
-      chalk.bgWhite(chalk.black(` @ ${tweet.user.screen_name} `)),
-      '\n\n',
-      tweet.text,
-      '\n'
-    )
+  displayReply(tweet, message) {
+    logService.info({
+      title: 'Tweet',
+      subtitle: `@${tweet.user.screen_name}`,
+      message: tweet.text,
+    })
 
-    console.log(
-      chalk.bgGreen(chalk.black(` Answer   — `)),
-      chalk.bgWhite(chalk.black(` @ ${botSettings.username} `)),
-      '\n\n',
-      message,
-      '\n'
-    )
+    logService.success({
+      title: 'Reply',
+      subtitle: `@${botSettings.username}`,
+      message: message,
+    })
   },
 
   isRetweet(tweet) {
@@ -90,28 +90,21 @@ const tweetService = {
     return tweet.user.screen_name === botSettings.username
   },
 
-  answer(api, tweet, message) {
+  reply(api, tweet, message) {
     const postParam = {
       in_reply_to_status_id: tweet.id_str,
       status: `@${tweet.user.screen_name} ${message}`,
     }
 
-    const timeToAnswer = getRandomInt(
-      botSettings.timeToAnswer.min,
-      botSettings.timeToAnswer.max
-    )
+    api.post('statuses/update', postParam, (err, data, response) => {
+      this.displayReply(tweet, message)
 
-    // make it not so much bot
-    setTimeout(() => {
-      api.post('statuses/update', postParam, (err, data, response) => {
-        this.displayAnswer(tweet, message)
-
-        if (err) {
-          console.log(chalk.bgRed(chalk.black(` ${err} `)))
-          console.log('\n')
-        }
-      })
-    }, timeToAnswer)
+      if (err) {
+        logService.error({
+          message: err,
+        })
+      }
+    })
   },
 }
 

@@ -1,7 +1,4 @@
-import Twit from 'twit'
-
-import getRandomInt from './lib/getRandomInt'
-import checkAndAnswer from './lib/checkAndAnswer'
+import chalk from 'chalk'
 
 import settings from '../settings.json'
 const {
@@ -9,64 +6,77 @@ const {
   bot: botSettings,
   recipient: recipientSettings,
 } = settings
+import rules from '../rules.json'
+import sentence from '../sentence.json'
 
-import tracking from './tracking.json'
-tracking.push(botSettings.username) // add username to be tracked too
-
-import tweetService from './service'
-
-import answersRules from './rules/answers'
-import streamingRules from './rules/streaming'
+import tweetService from './services/tweet'
+import apisService from './services/apis'
+import queueService from './services/queue'
+import rulesService from './services/rules'
+import replyService from './services/reply'
+import logService from './services/log'
 
 /**
  * Definition
  */
-const api = new Twit(apiSettings)
+queueService.start(botSettings.timeToReply)
 
-const streamOpts = {
-  track: tracking,
-}
+apisService.generate(apiSettings)
+
+const api = apisService.getReader()
 
 /**
  * Action!
  */
-api.stream('statuses/filter', streamOpts).on('tweet', tweet => {
-  // DEBUG mode
-  // tweetService.debug(tweet)
+api
+  .stream('statuses/filter', {
+    track: rulesService.getTrack(rules, botSettings.username),
+  })
+  .on('tweet', tweet => {
+    // DEBUG mode
+    // tweetService.debug(tweet)
 
-  /**
-   * filters
-   */
-  //
-  if (tweetService.isUserTheBot(tweet)) return
-  // blacklisted? do not answer
-  if (tweetService.isUserBlacklisted(tweet)) return
-  // RT? do not answer
-  if (tweetService.isRetweet(tweet)) return
-  // do not care about small accounts
-  if (!tweetService.isUserHasEnoughFollowers(tweet)) return
-  // do not care about too recent accounts
-  if (!tweetService.isUserHasEnoughYear(tweet)) return
-  // do not care about protected accounts
-  if (tweetService.isUserProtected(tweet)) return
-  // do not care about some languages
-  if (!(tweetService.isFrench(tweet) || tweetService.isEnglish(tweet))) return
+    /**
+     * filters
+     */
+    // do not reply to yourself
+    if (tweetService.isUserTheBot(tweet)) return
+    // blacklisted? do not reply
+    if (tweetService.isUserBlacklisted(tweet)) return
+    // RT? do not reply
+    if (tweetService.isRetweet(tweet)) return
+    // do not care about small accounts
+    if (!tweetService.isUserHasEnoughFollowers(tweet)) return
+    // do not care about too recent accounts
+    if (!tweetService.isUserHasEnoughYear(tweet)) return
+    // do not care about protected accounts
+    if (tweetService.isUserProtected(tweet)) return
+    // do not care about some languages
+    if (!(tweetService.isFrench(tweet) || tweetService.isEnglish(tweet))) return
 
-  // show streaming
-  tweetService.displayStream(tweet)
+    // show streaming
+    tweetService.displayStream(tweet)
 
-  let rules
+    const selectedRules = tweetService.isUserReplyingToBot(tweet)
+      ? rulesService.getReplyScope(rules)
+      : rulesService.getTrackScope(rules)
 
-  if (tweetService.isUserReplyingToBot(tweet)) {
-    rules = answersRules
-  } else {
-    rules = streamingRules
-  }
+    const reply = replyService.get(tweet, selectedRules, sentence)
 
-  const answer = checkAndAnswer(tweet.text, rules)
-
-  // tweet if there's something to answer
-  if (answer !== null) {
-    tweetService.answer(api, tweet, answer)
-  }
-})
+    // tweet if there's something to reply
+    if (reply !== null) {
+      queueService.add(() => {
+        tweetService.reply(apisService.getWriter(), tweet, reply)
+      })
+    }
+  })
+  .on('disconnect', message => {
+    logService.error({
+      message: message,
+    })
+  })
+  .on('error', message => {
+    logService.error({
+      message: message,
+    })
+  })
