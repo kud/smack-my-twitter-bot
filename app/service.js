@@ -107,7 +107,8 @@ const tweetService = {
         this.displayAnswer(tweet, message)
 
         if (err) {
-          console.log(chalk.bgRed(chalk.black(err)))
+          console.log(chalk.bgRed(chalk.black(` ${err} `)))
+          console.log('\n')
         }
       })
     }, timeToAnswer)
