@@ -9,14 +9,14 @@
   "bot": {
     "username": "MUST_BE_SPECIFIED",
     "timeToAnswer": {
-      "min": "1000",
-      "max": "10000"
+      "min": 1000,
+      "max": 10000
     }
   },
 
   "recipient": {
-    "minFollowers": "500",
-    "minYear": "0",
+    "minFollowers": 500,
+    "minYear": 0,
     "whitelist": [],
     "blacklist": []
   }
