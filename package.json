@@ -6,7 +6,9 @@
   "scripts": {
     "preinstall": "cp -n settings.dist.json settings.json || true",
     "prettier": "prettier --single-quote --trailing-comma es5 --no-semi --write \"app/**/*.js\"",
-    "start": "nodemon app/index.js --exec node_modules/.bin/babel-node"
+    "start": "nodemon app/index.js --exec node_modules/.bin/babel-node",
+    "start:prod": "nodemon dist/index.js",
+    "build": "babel app --out-dir dist"
   },
   "repository": {
     "type": "git",
