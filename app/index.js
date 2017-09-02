@@ -41,8 +41,8 @@ api
      */
     // do not reply to yourself
     if (tweetService.isUserTheBot(tweet)) return
-    // blacklisted? do not reply
-    if (tweetService.isUserBlacklisted(tweet)) return
+    // blocklisted? do not reply
+    if (tweetService.isUserBlocklisted(tweet)) return
     // RT? do not reply
     if (tweetService.isRetweet(tweet)) return
     // do not care about small accounts

@@ -16,7 +16,7 @@
   "recipient": {
     "minFollowers": 500,
     "minYear": 0,
-    "whitelist": [],
-    "blacklist": []
+    "safelist": [],
+    "blocklist": []
   }
 }

@@ -48,12 +48,12 @@ const tweetService = {
     return typeof tweet.retweeted_status !== 'undefined'
   },
 
-  isUserBlacklisted(tweet) {
-    return _.indexOf(recipientSettings.blacklist, tweet.user.screen_name) >= 0
+  isUserBlocklisted(tweet) {
+    return _.indexOf(recipientSettings.blocklist, tweet.user.screen_name) >= 0
   },
 
-  isUserWhitelisted(tweet) {
-    return _.indexOf(recipientSettings.whitelist, tweet.user.screen_name) < 0
+  isUserSafelisted(tweet) {
+    return _.indexOf(recipientSettings.safelist, tweet.user.screen_name) < 0
   },
 
   isUserHasEnoughFollowers(tweet) {
