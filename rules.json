@@ -1,0 +1,401 @@
+[
+  {
+    "regex": "[^a-z]fdp",
+    "scope": ["reply"],
+    "sentence": ["fdp"]
+  },
+  {
+    "regex": "[^a-z]tg",
+    "scope": ["reply"],
+    "sentence": ["toOffensive", "tg"]
+  },
+  {
+    "regex": "(merci|pardon|désolé|desole)",
+    "scope": ["reply"],
+    "sentence": ["gratitude"]
+  },
+  {
+    "regex": "nike",
+    "scope": ["reply"],
+    "sentence": ["nike"]
+  },
+  {
+    "regex": "respect",
+    "scope": ["reply"],
+    "sentence": ["respect"]
+  },
+  {
+    "regex": "(ntm|(nique|niquer) ta (mère|mere))",
+    "scope": ["reply"],
+    "sentence": ["mere", "ntm"]
+  },
+  {
+    "regex": "[^a-z](gueule|ballec|blc|foutre|vtf|vtff|chier|couille|couilles)",
+    "scope": ["reply"],
+    "sentence": ["toOffensive"]
+  },
+  {
+    "regex": "[^a-z](robot|robots|bot|bots)",
+    "scope": ["reply"],
+    "sentence": ["toBot"]
+  },
+  {
+    "regex": "",
+    "scope": ["reply"],
+    "sentence": ["smalltalk"]
+  },
+  {
+    "track": ["faute"],
+    "regex": "la faute (a|à|aux)",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "la faute à",
+      "fix": "la faute de"
+    }
+  },
+  {
+    "track": ["entrain de"],
+    "regex": "entrain de",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing", "entrain"],
+    "options": {
+      "original": "entrain",
+      "fix": "en train"
+    }
+  },
+  {
+    "track": ["recrute stagiaire"],
+    "regex": "recrute[\\w\\s]+stagiaire",
+    "scope": ["track"],
+    "sentence": ["stagiaire"]
+  },
+  {
+    "track": ["coiffeur", "medecin", "pharmacien", "notaire", "dentiste", "garagiste"],
+    "regex": "au (coiffeur|médecin|medecin|pharmacien|notaire|dentiste|garagiste)",
+    "scope": ["track"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "au",
+      "fix": "chez"
+    }
+  },
+  {
+    "track": ["je comprend"],
+    "regex": "[^a-z]je comprend",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing", "mistake"],
+    "options": {
+      "original": "je comprend",
+      "fix": "je comprends"
+    }
+  },
+  {
+    "track": ["tous le monde"],
+    "regex": "[^a-z]tous le monde\\W",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing", "mistake"],
+    "options": {
+      "original": "tous le monde",
+      "fix": "tout le monde"
+    }
+  },
+  {
+    "track": ["mille lieux"],
+    "regex": "(mille|milles) lieux",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing", "mistake"],
+    "options": {
+      "original": "mille lieux",
+      "fix": "mille lieues"
+    }
+  },
+  {
+    "track": ["bonne appetit", "bonne appétit"],
+    "regex": "bonne (appetit|appétit)",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing", "mistake"],
+    "options": {
+      "original": "bonne appétit",
+      "fix": "bon appétit"
+    }
+  },
+  {
+    "track": ["digital", "digitale", "digitales"],
+    "regex": "[^a-z](le|du) digital",
+    "scope": ["track", "reply"],
+    "sentence": ["digital", "fixing", "mistake"],
+    "options": {
+      "original": "digital",
+      "fix": "numérique"
+    }
+  },
+  {
+    "track": ["datas"],
+    "regex": "[^a-z]datas[^a-z]",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "datas",
+      "fix": "data"
+    }
+  },
+  {
+    "track": ["moi qui a"],
+    "regex": "[^a-z]moi qui a ",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "moi qui a",
+      "fix": "moi qui ai"
+    }
+  },
+  {
+    "track": ["moi qui as"],
+    "regex": "[^a-z]moi qui as ",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "moi qui as",
+      "fix": "moi qui ai"
+    }
+  },
+  {
+    "track": ["chiffre affaire"],
+    "regex": "chiffre d\\'affaire[^s]",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "chiffre d'affaire",
+      "fix": "chiffre d'affaires"
+    }
+  },
+  {
+    "track": ["scénarios", "scenarios"],
+    "regex": "[^a-z]scénarios",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "scénarios",
+      "fix": "scenarii"
+    }
+  },
+  {
+    "track": ["discution"],
+    "regex": "[^a-z]discution",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "discution",
+      "fix": "discussion"
+    }
+  },
+  {
+    "track": ["mourrir"],
+    "regex": "[^a-z][^a-z]mourrir",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing", "mourrir"],
+    "options": {
+      "original": "mourrir",
+      "fix": "mourir"
+    }
+  },
+  {
+    "track": ["la connection"],
+    "regex": "[^a-z]la connection",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "la connection",
+      "fix": "la connexion"
+    }
+  },
+  {
+    "track": ["quizz"],
+    "regex": "[^a-z]quizz",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "quizz",
+      "fix": "quiz"
+    }
+  },
+  {
+    "track": ["tord"],
+    "regex": "j\\'ai tord",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing", "tord"],
+    "options": {
+      "original": "j'ai tord",
+      "fix": "j'ai tort"
+    }
+  },
+  {
+    "track": ["tampis"],
+    "regex": "[^a-z]tampis",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "tampis",
+      "fix": "tant pis"
+    }
+  },
+  {
+    "track": ["soucis"],
+    "regex": "(du|le) soucis",
+    "scope": ["track", "reply"],
+    "sentence": ["soucis", "fixing"],
+    "options": {
+      "original": "soucis",
+      "fix": "souci"
+    }
+  },
+  {
+    "track": ["comme meme", "comme même"],
+    "regex": "[^a-z]comme (meme|même)",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "comme même",
+      "fix": "quand même"
+    }
+  },
+  {
+    "track": ["faire sens", "fait sens"],
+    "regex": "[^a-z](fait|faire) sens",
+    "scope": ["track", "reply"],
+    "sentence": ["faireSens"]
+  },
+  {
+    "track": ["aimerai bien"],
+    "regex": "[^a-z]aimerai bien",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "aimerai bien",
+      "fix": "aimerais bien"
+    }
+  },
+  {
+    "track": ["bonne anniversaire"],
+    "regex": "bonne anniversaire",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "bonne anniversaire",
+      "fix": "bon anniversaire"
+    }
+  },
+  {
+    "track": ["quand a"],
+    "regex": "quand (à|a) (lui|toi|vous|elle)",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "quand à",
+      "fix": "quant à"
+    }
+  },
+  {
+    "track": ["ai fais"],
+    "regex": "ai fais",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "j'ai fais",
+      "fix": "j'ai fait"
+    }
+  },
+  {
+    "track": ["ai dis"],
+    "regex": "ai dis",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "j'ai dis",
+      "fix": "j'ai dit"
+    }
+  },
+  {
+    "track": ["acceuil"],
+    "regex": "acceuil",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "acceuil",
+      "fix": "accueil"
+    }
+  },
+  {
+    "track": ["soit disant"],
+    "regex": "soit disant",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "soit disant",
+      "fix": "soi-disant"
+    }
+  },
+  {
+    "track": ["croivent"],
+    "regex": "croivent",
+    "scope": ["track", "reply"],
+    "sentence": ["croivent"]
+  },
+  {
+    "track": ["croive"],
+    "regex": "croive",
+    "scope": ["track", "reply"],
+    "sentence": ["croive"]
+  },
+  {
+    "track": ["shema"],
+    "regex": "[^a-z]sh(é|e)ma",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "shema",
+      "fix": "schéma"
+    }
+  },
+  {
+    "track": ["davantages"],
+    "regex": "[^a-z]davantages",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "davantages",
+      "fix": "d'avantages"
+    }
+  },
+  {
+    "track": ["toujour"],
+    "regex": " toujour ",
+    "scope": ["track"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "toujour",
+      "fix": "toujours"
+    }
+  },
+  {
+    "track": ["si j'aurai su"],
+    "regex": "si j'?aurais? su",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "si j'aurai su",
+      "fix": "si j'avais su"
+    }
+  },
+  {
+    "track": ["ciseau"],
+    "regex": "(le|du) ciseau",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "ciseau",
+      "fix": "les ciseaux / une paire de ciseaux"
+    }
+  }
+]

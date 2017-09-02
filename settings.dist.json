@@ -1,23 +1,22 @@
 {
-  "api": {
-    "consumer_key": "MUST_BE_SPECIFIED",
-    "consumer_secret": "MUST_BE_SPECIFIED",
-    "access_token": "MUST_BE_SPECIFIED",
-    "access_token_secret": "MUST_BE_SPECIFIED"
-  },
+  "api": [
+    {
+      "consumer_key": "MUST_BE_SPECIFIED",
+      "consumer_secret": "MUST_BE_SPECIFIED",
+      "access_token": "MUST_BE_SPECIFIED",
+      "access_token_secret": "MUST_BE_SPECIFIED"
+    }
+  ],
 
   "bot": {
     "username": "MUST_BE_SPECIFIED",
-    "timeToAnswer": {
-      "min": 1000,
-      "max": 10000
-    }
+    "timeToReply": 1000
   },
 
   "recipient": {
     "minFollowers": 500,
     "minYear": 0,
-    "whitelist": [],
-    "blacklist": []
+    "safelist": [],
+    "blocklist": []
   }
 }
