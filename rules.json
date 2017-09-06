@@ -171,16 +171,6 @@
     }
   },
   {
-    "track": ["scénarios", "scenarios"],
-    "regex": "[^a-z]scénarios",
-    "scope": ["track", "reply"],
-    "sentence": ["fixing"],
-    "options": {
-      "original": "scénarios",
-      "fix": "scenarii"
-    }
-  },
-  {
     "track": ["discution"],
     "regex": "[^a-z]discution",
     "scope": ["track", "reply"],
