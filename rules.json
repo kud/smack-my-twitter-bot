@@ -82,7 +82,7 @@
   },
   {
     "track": ["je comprend"],
-    "regex": "[^a-z]je comprend",
+    "regex": "[^a-z]je([ne ]*)?comprend[^a-z]",
     "scope": ["track", "reply"],
     "sentence": ["fixing", "mistake"],
     "options": {
