@@ -387,5 +387,14 @@
       "original": "ciseau",
       "fix": "les ciseaux / une paire de ciseaux"
     }
+  },
+  {
+    "track": ["disruptif"],
+    "regex": "disruptif",
+    "scope": ["track"],
+    "sentence": ["mistake"],
+    "options": {
+      "original": "disruptif"
+    }
   }
 ]
