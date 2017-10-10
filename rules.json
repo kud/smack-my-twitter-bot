@@ -406,5 +406,15 @@
       "original": "tort",
       "fix": "tort"
     }
+  },
+  {
+    "track": ["ballade"],
+    "regex": "en ballade",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "en ballade",
+      "fix": "en balade"
+    }
   }
 ]
