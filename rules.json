@@ -396,5 +396,15 @@
     "options": {
       "original": "disruptif"
     }
+  },
+  {
+    "track": ["tord"],
+    "regex": "(j'?ai|tu as|il a|elle a) tord",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "tort",
+      "fix": "tort"
+    }
   }
 ]
