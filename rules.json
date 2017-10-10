@@ -416,5 +416,15 @@
       "original": "en ballade",
       "fix": "en balade"
     }
+  },
+  {
+    "track": ["sur paris bordeaux marseille lyon nice toulouse lyon nantes"],
+    "regex": "sur (paris|bordeaux|marseille|lyon|nice|toulouse|lyon|nantes)",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "sur",
+      "fix": "à (comme \"à Paris\")"
+    }
   }
 ]
