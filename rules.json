@@ -396,5 +396,35 @@
     "options": {
       "original": "disruptif"
     }
+  },
+  {
+    "track": ["tord"],
+    "regex": "(j'?ai|tu as|il a|elle a) tord",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "tort",
+      "fix": "tort"
+    }
+  },
+  {
+    "track": ["ballade"],
+    "regex": "en ballade",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "en ballade",
+      "fix": "en balade"
+    }
+  },
+  {
+    "track": ["sur paris bordeaux marseille lyon nice toulouse lyon nantes"],
+    "regex": "sur (paris|bordeaux|marseille|lyon|nice|toulouse|lyon|nantes)",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "sur",
+      "fix": "à (comme \"à Paris\")"
+    }
   }
 ]
