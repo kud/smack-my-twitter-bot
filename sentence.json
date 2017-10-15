@@ -42,8 +42,13 @@
     "Regardons dans le dictionnaire. Ah ! C'est bien « {{fix}} » et non « {{original}} ». 👌"
   ],
   "mistake": [
-    "Nom de dieu… « {{original}} »…",
-    "Mes yeux… « {{original}} »…",
+    "La vache ! « {{original}} » ? Cette faute !",
+    "Bonjour ! « {{original}} » n'est pas correct. A bientôt !",
+    "Wow « {{original}} ». Sale faute.",
+    "On se corrige. « {{original}} » n'est pas bon.",
+    "« {{original}} » ? Non mais… « {{original}} » ?",
+    "Nom de dieu… « {{original}} »… Quelle faute.",
+    "Mes yeux… « {{original}} »… Quelle faute.",
     "Faute : « {{original}} »",
     "Fauuuuuuuuuuuuute : « {{original}} »",
     "Carton rouge : « {{original}} »",
@@ -54,7 +59,6 @@
     "« {{original}} » ? Je ne pense pas que cela s'écrive comme ça.",
     "« {{original}} » ? Je ne pense pas non.",
     "« {{original}} » ? J'ai un doute.",
-    "Mais ? « {{original}} » ? Vraiment ?",
     "Mais ? « {{original}} » ? Vraiment ?",
     "Allez, on ramasse les copies. Oh mais je vois une faute : « {{original}} »."
   ],
@@ -235,10 +239,17 @@
     "Je n'arrive pas à cliquer droit avec ma souris.",
     "Il fait beau en Bretagne ?",
     "J'irais bien en Bretagne, vous y êtes déjà allé(e) ?",
+    "Je suis allé à la plage hier, c'était vraiment un moment fantastique.",
+    "Mon chat vient de vomir, je reviens.",
+    "Quel style de musique écoutez-vous ?",
+    "Toujours avoir un dictionnaire sur soi, c'est pratique.",
+    "J'entends des bruits bizarres, je vais voir ce qu'il se passe.",
+    "Je crois que je suis malade.",
     "Oui mais dans une certaine mesure seulement."
   ],
   "toBot": [
     "Qui a dit que j'étais un robot ? 😇",
+    "Robot ? Vous n'avez que ça en bouche ?",
     "Moi, un robot ? Voyons.",
     "Un bot ? lol.",
     "Nous sommes tous le bot d'un autre. 😇",
@@ -430,7 +441,7 @@
     "Miroir, mon beau miroir ! Dis-moi qui est « sur la bonne voie » ?! ..."
   ],
   "stagiaire": [
-    "Vous savez… On ne recrute pas vraiment un stagiaire. Au pire, on propose une offre de stage."
+    "Vous savez… On ne recrute pas vraiment un stagiaire. Au mieux, on propose une offre de stage."
   ],
   "soucis": [
     "Souci au singulier ne prend pas de « s ». 👌",
