@@ -476,5 +476,15 @@
       "original": "sur Toulouse",
       "fix": "à Toulouse"
     }
+  },
+  {
+    "track": ["c'est leur de"],
+    "regex": "c'est leur de",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "c'est leur de",
+      "fix": "c'est l'heure de"
+    }
   }
 ]
