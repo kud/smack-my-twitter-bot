@@ -418,13 +418,63 @@
     }
   },
   {
-    "track": ["sur paris bordeaux marseille lyon nice toulouse lyon nantes"],
-    "regex": "sur (paris|bordeaux|marseille|lyon|nice|toulouse|lyon|nantes)",
+    "track": ["sur paris"],
+    "regex": "sur paris",
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
-      "original": "sur",
-      "fix": "à (comme \"à Paris\")"
+      "original": "sur Paris",
+      "fix": "à Paris"
+    }
+  },
+  {
+    "track": ["sur bordeaux"],
+    "regex": "sur bordeaux",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "sur Bordeaux",
+      "fix": "à Bordeaux"
+    }
+  },
+  {
+    "track": ["sur marseille"],
+    "regex": "sur marseille",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "sur Marseille",
+      "fix": "à Marseille"
+    }
+  },
+  {
+    "track": ["sur nantes"],
+    "regex": "sur nantes",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "sur Nantes",
+      "fix": "à Nantes"
+    }
+  },
+  {
+    "track": ["sur lyon"],
+    "regex": "sur lyon",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "sur Lyon",
+      "fix": "à Lyon"
+    }
+  },
+  {
+    "track": ["sur toulouse"],
+    "regex": "sur toulouse",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "sur Toulouse",
+      "fix": "à Toulouse"
     }
   }
 ]
