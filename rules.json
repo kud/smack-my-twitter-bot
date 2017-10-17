@@ -72,7 +72,7 @@
   },
   {
     "track": ["coiffeur", "medecin", "pharmacien", "notaire", "dentiste", "garagiste"],
-    "regex": "au (coiffeur|médecin|medecin|pharmacien|notaire|dentiste|garagiste)",
+    "regex": "(vais|aller|va|vas) au (coiffeur|médecin|medecin|pharmacien|notaire|dentiste|garagiste)",
     "scope": ["track"],
     "sentence": ["fixing"],
     "options": {
