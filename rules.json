@@ -518,6 +518,16 @@
     }
   },
   {
+    "track": ["gallerie"],
+    "regex": "la gallerie",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "la gallerie",
+      "fix": "la galerie"
+    }
+  },
+  {
     "track": ["1ere", "2eme", "3eme"],
     "regex": "(1ere|2eme|3eme)",
     "scope": ["track", "reply"],
