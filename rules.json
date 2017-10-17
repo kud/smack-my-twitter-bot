@@ -478,6 +478,16 @@
     }
   },
   {
+    "track": ["voir meme"],
+    "regex": "voir meme",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "voir même",
+      "fix": "voire même"
+    }
+  },
+  {
     "track": ["c'est leur de"],
     "regex": "c'est leur de",
     "scope": ["track", "reply"],
@@ -488,10 +498,40 @@
     }
   },
   {
+    "track": ["carousel"],
+    "regex": "l(a|e) carousel",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "le carousel",
+      "fix": "le carrousel"
+    }
+  },
+  {
+    "track": ["caroussel"],
+    "regex": "l(a|e) caroussel",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "le caroussel",
+      "fix": "le carrousel"
+    }
+  },
+  {
+    "track": ["gallerie"],
+    "regex": "la gallerie",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "la gallerie",
+      "fix": "la galerie"
+    }
+  },
+  {
     "track": ["1ere", "2eme", "3eme"],
     "regex": "(1ere|2eme|3eme)",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "ordinaux 1ere, 2eme, 3eme",
       "fix": "1re, 2e, 3e"
