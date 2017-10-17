@@ -478,6 +478,16 @@
     }
   },
   {
+    "track": ["voir meme"],
+    "regex": "voir meme",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "voir même",
+      "fix": "voire même"
+    }
+  },
+  {
     "track": ["c'est leur de"],
     "regex": "c'est leur de",
     "scope": ["track", "reply"],
