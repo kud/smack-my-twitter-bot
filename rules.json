@@ -528,6 +528,16 @@
     }
   },
   {
+    "track": ["fachiste"],
+    "regex": "fachiste",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "fachiste",
+      "fix": "fasciste"
+    }
+  },
+  {
     "track": ["1ere", "2eme", "3eme"],
     "regex": "(1ere|2eme|3eme)",
     "scope": ["track", "reply"],
