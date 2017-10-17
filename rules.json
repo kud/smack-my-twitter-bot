@@ -498,6 +498,26 @@
     }
   },
   {
+    "track": ["carousel"],
+    "regex": "l(a|e) carousel",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "le carousel",
+      "fix": "le carrousel"
+    }
+  },
+  {
+    "track": ["caroussel"],
+    "regex": "l(a|e) caroussel",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "le caroussel",
+      "fix": "le carrousel"
+    }
+  },
+  {
     "track": ["1ere", "2eme", "3eme"],
     "regex": "(1ere|2eme|3eme)",
     "scope": ["track", "reply"],
