@@ -533,7 +533,7 @@
     "scope": ["track", "reply"],
     "sentence": ["fixing"],
     "options": {
-      "original": "ordinaux 1ere, 2eme, 3eme",
+      "original": "1ere, 2eme, 3eme",
       "fix": "1re, 2e, 3e"
     }
   }
