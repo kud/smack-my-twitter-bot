@@ -521,7 +521,7 @@
     "track": ["1ere", "2eme", "3eme"],
     "regex": "(1ere|2eme|3eme)",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "ordinaux 1ere, 2eme, 3eme",
       "fix": "1re, 2e, 3e"
