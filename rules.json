@@ -569,12 +569,22 @@
   },
   {
     "track": ["etc"],
-    "regex": "etc(\.\.\.|…)",
+    "regex": "etc(\\.\\.\\.|…)",
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
       "original": "etc...",
       "fix": "etc."
+    }
+  },
+  {
+    "track": ["demie"],
+    "regex": "demie-",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "demie-",
+      "fix": "demi-"
     }
   },
   {
