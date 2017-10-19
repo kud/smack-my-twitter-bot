@@ -548,6 +548,26 @@
     }
   },
   {
+    "track": ["faisez"],
+    "regex": "faisez",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "faisez",
+      "fix": "faites"
+    }
+  },
+  {
+    "track": ["disez"],
+    "regex": "disez",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "disez",
+      "fix": "dites"
+    }
+  },
+  {
     "track": ["1ere", "2eme", "3eme"],
     "regex": "(1ere|2eme|3eme)",
     "scope": ["track", "reply"],
