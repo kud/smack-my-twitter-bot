@@ -568,6 +568,16 @@
     }
   },
   {
+    "track": ["etc"],
+    "regex": "etc(\.\.\.|…)",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "etc...",
+      "fix": "etc."
+    }
+  },
+  {
     "track": ["1ere", "2eme", "3eme"],
     "regex": "(1ere|2eme|3eme)",
     "scope": ["track", "reply"],
