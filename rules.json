@@ -538,6 +538,16 @@
     }
   },
   {
+    "track": ["des fois"],
+    "regex": "des fois",
+    "scope": ["track", "reply"],
+    "sentence": ["mistake", "fixing"],
+    "options": {
+      "original": "des fois",
+      "fix": "parfois"
+    }
+  },
+  {
     "track": ["1ere", "2eme", "3eme"],
     "regex": "(1ere|2eme|3eme)",
     "scope": ["track", "reply"],
