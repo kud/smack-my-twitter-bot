@@ -589,7 +589,7 @@
   },
   {
     "track": ["cryptage"],
-    "regex": "[^a-zA-Z]cryptage",
+    "regex": "[^a-zA-ZéÉ]cryptage",
     "scope": ["track", "reply"],
     "sentence": ["fixing", "cryptage"],
     "options": {
