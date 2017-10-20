@@ -494,8 +494,8 @@
   "premierGroupeParticipePasse": [
     "Participe passé du premier groupe avec l'auxiliaire « avoir », c'est « é » et non « er »."
   ],
-  "ormi": [
-    "Il faut plutôt écrire « Hormis ». Hormis cela, tout semble correct. Ah tiens, elle est bonne celle-là !"
+  "hormis": [
+    "Il faut plutôt écrire « hormis ». Hormis cela, tout semble correct. Ah tiens, elle est bonne celle-là !"
   ],
   "ntm": [
     "Oui, ce n'est pas un mauvais groupe. Après... ce n'est pas ma tasse de thé non plus.",
@@ -569,5 +569,8 @@
     "Crypter, cryptage, hmm hmm.",
     "Criffrement non ?",
     "Criffrer non ?"
+  ],
+  "etc": [
+    "Règle sur « etc » : https://www.projet-voltaire.fr/regles-orthographe/etc-ou-etc/"
   ]
 }

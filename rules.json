@@ -30,9 +30,9 @@
     "sentence": ["mere", "ntm"]
   },
   {
-    "regex": "[^a-z](gueule|ballec|blc|foutre|vtf|vtff|chier|couille|couilles)",
+    "regex": "[^a-z](gueule|ballec|blc|foutre|vtf|vtff|chier|couille|couilles|merde)",
     "scope": ["reply"],
-    "sentence": ["toOffensive"]
+    "sentence": ["toOffensive", "respect"]
   },
   {
     "regex": "[^a-z](robot|robots|bot|bots)",
@@ -84,7 +84,7 @@
     "track": ["je comprend"],
     "regex": "[^a-z]je([ne ]*)?comprend[^a-z]",
     "scope": ["track", "reply"],
-    "sentence": ["fixing", "mistake"],
+    "sentence": ["fixing"],
     "options": {
       "original": "je comprend",
       "fix": "je comprends"
@@ -124,7 +124,7 @@
     "track": ["digital", "digitale", "digitales"],
     "regex": "[^a-z](le|du) digital",
     "scope": ["track", "reply"],
-    "sentence": ["digital", "fixing", "mistake"],
+    "sentence": ["digital", "fixing"],
     "options": {
       "original": "digital",
       "fix": "numérique"
@@ -419,7 +419,7 @@
   },
   {
     "track": ["sur paris"],
-    "regex": "sur paris",
+    "regex": "sur paris[^-]",
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
@@ -429,7 +429,7 @@
   },
   {
     "track": ["sur bordeaux"],
-    "regex": "sur bordeaux",
+    "regex": "sur bordeaux[^-]",
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
@@ -439,7 +439,7 @@
   },
   {
     "track": ["sur marseille"],
-    "regex": "sur marseille",
+    "regex": "sur marseille[^-]",
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
@@ -449,7 +449,7 @@
   },
   {
     "track": ["sur nantes"],
-    "regex": "sur nantes",
+    "regex": "sur nantes[^-]",
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
@@ -459,7 +459,7 @@
   },
   {
     "track": ["sur lyon"],
-    "regex": "sur lyon",
+    "regex": "sur lyon[^-]",
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
@@ -469,7 +469,7 @@
   },
   {
     "track": ["sur toulouse"],
-    "regex": "sur toulouse",
+    "regex": "sur toulouse[^-]",
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
@@ -481,7 +481,7 @@
     "track": ["voir meme"],
     "regex": "voir meme",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "voir même",
       "fix": "voire même"
@@ -491,7 +491,7 @@
     "track": ["c'est leur de"],
     "regex": "c'est leur de",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "c'est leur de",
       "fix": "c'est l'heure de"
@@ -501,7 +501,7 @@
     "track": ["carousel"],
     "regex": "l(a|e) carousel",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "le carousel",
       "fix": "le carrousel"
@@ -511,7 +511,7 @@
     "track": ["caroussel"],
     "regex": "l(a|e) caroussel",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "le caroussel",
       "fix": "le carrousel"
@@ -521,7 +521,7 @@
     "track": ["gallerie"],
     "regex": "la gallerie",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "la gallerie",
       "fix": "la galerie"
@@ -531,7 +531,7 @@
     "track": ["fachiste"],
     "regex": "fachiste",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "fachiste",
       "fix": "fasciste"
@@ -541,7 +541,7 @@
     "track": ["des fois"],
     "regex": "des fois",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "des fois",
       "fix": "parfois"
@@ -551,7 +551,7 @@
     "track": ["faisez"],
     "regex": "faisez",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "faisez",
       "fix": "faites"
@@ -561,7 +561,7 @@
     "track": ["disez"],
     "regex": "disez",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "disez",
       "fix": "dites"
@@ -571,7 +571,7 @@
     "track": ["etc"],
     "regex": "etc(\\.\\.\\.|…)",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing", "etc"],
     "options": {
       "original": "etc...",
       "fix": "etc."
@@ -581,10 +581,50 @@
     "track": ["demie"],
     "regex": "demie-",
     "scope": ["track", "reply"],
-    "sentence": ["mistake", "fixing"],
+    "sentence": ["fixing"],
     "options": {
       "original": "demie-",
       "fix": "demi-"
+    }
+  },
+  {
+    "track": ["cryptage"],
+    "regex": "[^a-zA-Z]cryptage",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing", "cryptage"],
+    "options": {
+      "original": "cryptage",
+      "fix": "chiffrement"
+    }
+  },
+  {
+    "track": ["magasine"],
+    "regex": "[^a-zA-Z]magasine",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing", "magasine"],
+    "options": {
+      "original": "magasine",
+      "fix": "magazine"
+    }
+  },
+  {
+    "track": ["hormi"],
+    "regex": "[^a-zA-Z]hormi[^s]",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing", "hormis"],
+    "options": {
+      "original": "hormi",
+      "fix": "hormis"
+    }
+  },
+  {
+    "track": ["language"],
+    "regex": "(le|du|de) language",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "language",
+      "fix": "langage"
     }
   },
   {
