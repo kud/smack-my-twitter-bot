@@ -628,6 +628,26 @@
     }
   },
   {
+    "track": ["envois"],
+    "regex": "(le|du|de) language",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "language",
+      "fix": "langage"
+    }
+  },
+  {
+    "track": ["envois"],
+    "regex": "j'?envois",
+    "scope": ["track", "reply"],
+    "sentence": ["fixing"],
+    "options": {
+      "original": "j'envois",
+      "fix": "j'envoie"
+    }
+  },
+  {
     "track": ["1ere", "2eme", "3eme"],
     "regex": "(1ere|2eme|3eme)",
     "scope": ["track", "reply"],
