@@ -122,7 +122,7 @@
   },
   {
     "track": ["digital", "digitale", "digitales"],
-    "regex": "(le|du) digital ?[^( learning)],
+    "regex": "(le|du) digital(?!\\s+learning)",
     "scope": ["track", "reply"],
     "sentence": ["digital", "fixing"],
     "options": {
