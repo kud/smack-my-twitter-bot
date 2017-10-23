@@ -122,7 +122,7 @@
   },
   {
     "track": ["digital", "digitale", "digitales"],
-    "regex": "[^a-z](le|du) digital",
+    "regex": "(le|du) digital ?[^( learning)],
     "scope": ["track", "reply"],
     "sentence": ["digital", "fixing"],
     "options": {
@@ -208,16 +208,6 @@
     "options": {
       "original": "quizz",
       "fix": "quiz"
-    }
-  },
-  {
-    "track": ["tord"],
-    "regex": "j\\'ai tord",
-    "scope": ["track", "reply"],
-    "sentence": ["fixing", "tord"],
-    "options": {
-      "original": "j'ai tord",
-      "fix": "j'ai tort"
     }
   },
   {
@@ -403,7 +393,7 @@
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
-      "original": "tort",
+      "original": "tord",
       "fix": "tort"
     }
   },
