@@ -409,7 +409,7 @@
   },
   {
     "track": ["sur paris"],
-    "regex": "sur paris(?!\s*premiere| ?- ?)",
+    "regex": "sur paris(?!\\s*premiere| ?- ?)",
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
