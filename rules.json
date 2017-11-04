@@ -56,7 +56,7 @@
   },
   {
     "track": ["entrain de"],
-    "regex": "entrain de",
+    "regex": "entrain de ",
     "scope": ["track", "reply"],
     "sentence": ["fixing", "entrain"],
     "options": {
@@ -409,7 +409,7 @@
   },
   {
     "track": ["sur paris"],
-    "regex": "sur paris[^-]",
+    "regex": "sur paris(?!\s*premiere| ?- ?)",
     "scope": ["track", "reply"],
     "sentence": ["mistake", "fixing"],
     "options": {
